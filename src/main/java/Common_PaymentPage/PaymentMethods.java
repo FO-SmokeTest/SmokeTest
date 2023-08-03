@@ -267,7 +267,7 @@ public class PaymentMethods extends AbstractComponents {
 		Thread.sleep(1000);
 		WebElement year = driver.findElement(By.xpath(xpathsFO_BookFlow.xpath_VisaExpireYear_NL));
 		Select years = new Select(year);
-		years.selectByVisibleText(prop.getProperty("VisacardExpiryYear"));
+		years.selectByVisibleText(prop.getProperty("VisacardExpiryYear_NL"));
 		
 		driver.findElement(By.xpath(xpathsFO_BookFlow.xpath_VisaCVV_NL)).sendKeys(prop.getProperty("VisacardCvv"));
 		

@@ -13,7 +13,7 @@ public class ExtentReproter {
 		String timeStamp = new SimpleDateFormat("yyyy.MM.dd").format(new Date());
 		String timeStamp2 = new SimpleDateFormat("HH.mm.ss").format(new Date());
 		
-		String path = System.getProperty("user.dir")+"//reports//" + timeStamp + "//" + timeStamp2 + ".html";
+		String path = System.getProperty("user.dir")+"//Reports//Results//" + timeStamp + "//" + timeStamp2 + ".html";
 		ExtentSparkReporter reporter = new ExtentSparkReporter(path);
 		reporter.config().setReportName("SmokeTest Results");
 		reporter.config().setDocumentTitle("Test Results");

@@ -3,7 +3,9 @@ package TestComponents;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
+import java.text.SimpleDateFormat;
 import java.time.Duration;
+import java.util.Date;
 import java.util.Properties;
 
 import org.apache.commons.io.FileUtils;
@@ -122,11 +124,14 @@ public class LaunchBrowser {
 	
 	public static String GetScreenshot(String TestCaseName, WebDriver driver) throws IOException 
 	{
+		String timeStamp = new SimpleDateFormat("yyyy.MM.dd").format(new Date());
+		String timeStamp2 = new SimpleDateFormat("HH.mm.ss").format(new Date());
+		
 		TakesScreenshot ts = (TakesScreenshot)driver;
 		File source = ts.getScreenshotAs(OutputType.FILE);
-		File file = new File (System.getProperty("user.dir")+ "//reports//" + TestCaseName + ".png");
+		File file = new File (System.getProperty("user.dir")+ "//Reports//ErrorScreenshots//" + timeStamp + "//" + timeStamp2 + "//" + TestCaseName + ".png");
 		FileUtils.copyFile(source, file);
-		return System.getProperty("user.dir")+ "//reports//" + TestCaseName + ".png";
+		return System.getProperty("user.dir")+ "//reports//ErrorScreenshots//" + timeStamp + "//" + timeStamp2 + "//" + TestCaseName + ".png";
 		
 	}
 	
