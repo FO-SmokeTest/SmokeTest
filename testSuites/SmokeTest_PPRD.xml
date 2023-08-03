@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="SmokeTest">
+	<listeners>
+		<listener class-name="TestComponents.Listeners"></listener>
+	</listeners>
+  <test thread-count="5" name="PPRD Smoketest Bookflow">
+    <classes>
+      <class name="FO_Testcases.TwowayWithAdults">
+		  <methods>
+			  <include name="PPRD_BE_B2C"/>
+			  <include name="PPRD_NL_B2C"/>
+			  <include name="PPRD_FR_B2C"/>
+			  <include name="PPRD_MA_B2C"/>
+			  <include name="PPRD_BE_Inhouse"/>
+			  <include name="PPRD_NL_Inhouse"/>
+			  <include name="PPRD_MA_Inhouse"/>
+			  <include name="PPRD_BE_3PA"/>
+			  <include name="PPRD_NL_3PA"/> 
+			  <include name="PPRD_MA_3PA"/>
+		  </methods>
+      </class>
+    </classes>
+  </test>
+  <test thread-count="5" name="PPRD Smoketest MMB">
+    <classes>
+      <class name="FO_Testcases.MMBflow">
+		  <methods>
+			  <include name="MMB_PPRD_BE_B2C"/>
+			  <include name="MMB_PPRD_NL_B2C"/>
+			  <include name="MMB_PPRD_FR_B2C"/>
+			  <include name="MMB_PPRD_MA_B2C"/>
+			  <include name="MMB_PPRD_BE_Inhouse"/>
+			  <include name="MMB_PPRD_NL_Inhouse"/>
+			  <include name="MMB_PPRD_MA_Inhouse"/>
+			  <include name="MMB_PPRD_BE_3PA"/>
+			  <include name="MMB_PPRD_NL_3PA"/> 
+			  <include name="MMB_PPRD_MA_3PA"/>
+		  </methods>
+      </class>
+    </classes>
+  </test>
+</suite> 
