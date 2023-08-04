@@ -80,8 +80,6 @@ public class Listeners extends LaunchBrowser implements ITestListener {
 		excenttest.get().addScreenCaptureFromPath(filepath, result.getMethod().getMethodName());
 		
 		
-		
-		
 	}
 
 	@Override

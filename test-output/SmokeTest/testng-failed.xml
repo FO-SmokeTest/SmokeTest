@@ -13,13 +13,4 @@
       </class> <!-- FO_Testcases.TwowayWithAdults -->
     </classes>
   </test> <!-- PPRD Smoketest Bookflow(failed) -->
-  <test thread-count="5" name="PPRD Smoketest MMB(failed)">
-    <classes>
-      <class name="FO_Testcases.MMBflow">
-        <methods>
-          <include name="MMB_PPRD_NL_B2C"/>
-        </methods>
-      </class> <!-- FO_Testcases.MMBflow -->
-    </classes>
-  </test> <!-- PPRD Smoketest MMB(failed) -->
 </suite> <!-- Failed suite [SmokeTest] -->

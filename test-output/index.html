@@ -25,7 +25,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite, 2 failed tests</span>
+      <span class="top-banner-font-1">1 suite</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -39,7 +39,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-SmokeTest" class="navigator-link">
-              <span class="suite-name border-failed">SmokeTest</span>
+              <span class="suite-name border-passed">SmokeTest</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -50,12 +50,12 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-SmokeTest" class="navigator-link ">
-                    <span>C:\SrinivasSelenium\SmokeTest_TestNG\testSuites\FailedTCs.xml</span>
+                    <span>C:\SrinivasSelenium\SmokeTest_TestNG\testSuites\SingleTC.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
                   <a href="#" panel-name="testlist-SmokeTest" class="navigator-link ">
-                    <span class="test-stats">2 tests</span>
+                    <span class="test-stats">1 test</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -92,45 +92,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">4 methods, 2 failed,  2 skipped,  </span>
+                    <span class="method-stats">1 method,   1 passed</span>
                   </li>
                   <li>
-                    <span class="method-list-title failed">Failed methods</span>
-                    <span class="show-or-hide-methods failed">
-                      <a href="#" panel-name="suite-SmokeTest" class="hide-methods failed suite-SmokeTest"> (hide)</a> <!-- hide-methods failed suite-SmokeTest -->
-                      <a href="#" panel-name="suite-SmokeTest" class="show-methods failed suite-SmokeTest"> (show)</a> <!-- show-methods failed suite-SmokeTest -->
+                    <span class="method-list-title passed">Passed methods</span>
+                    <span class="show-or-hide-methods passed">
+                      <a href="#" panel-name="suite-SmokeTest" class="hide-methods passed suite-SmokeTest"> (hide)</a> <!-- hide-methods passed suite-SmokeTest -->
+                      <a href="#" panel-name="suite-SmokeTest" class="show-methods passed suite-SmokeTest"> (show)</a> <!-- show-methods passed suite-SmokeTest -->
                     </span>
-                    <div class="method-list-content failed suite-SmokeTest">
+                    <div class="method-list-content passed suite-SmokeTest">
                       <span>
-                        <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-SmokeTest" title="FO_Testcases.MMBflow" class="method navigator-link" hash-for-method="MMB_PPRD_NL_B2C">MMB_PPRD_NL_B2C</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="failed.png" width="3%"/>
+                        <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-SmokeTest" title="FO_Testcases.TwowayWithAdults" class="method navigator-link" hash-for-method="PPRD_NL_B2C">PPRD_NL_B2C</a> <!-- method navigator-link -->
                       </span>
                       <br/>
-                    </div> <!-- method-list-content failed suite-SmokeTest -->
-                  </li>
-                  <li>
-                    <span class="method-list-title skipped">Retried methods</span>
-                    <span class="show-or-hide-methods skipped">
-                      <a href="#" panel-name="suite-SmokeTest" class="hide-methods skipped suite-SmokeTest"> (hide)</a> <!-- hide-methods skipped suite-SmokeTest -->
-                      <a href="#" panel-name="suite-SmokeTest" class="show-methods skipped suite-SmokeTest"> (show)</a> <!-- show-methods skipped suite-SmokeTest -->
-                    </span>
-                    <div class="method-list-content skipped suite-SmokeTest">
-                      <span>
-                        <img src="skipped.png" width="3%"/>
-                        <a href="#" panel-name="suite-SmokeTest" title="FO_Testcases.MMBflow" class="method navigator-link" hash-for-method="MMB_PPRD_NL_B2C">MMB_PPRD_NL_B2C</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="skipped.png" width="3%"/>
-                        <a href="#" panel-name="suite-SmokeTest" title="FO_Testcases.TwowayWithAdults" class="method navigator-link" hash-for-method="PPRD_NL_B2C">PPRD_NL_B2C</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                    </div> <!-- method-list-content skipped suite-SmokeTest -->
+                    </div> <!-- method-list-content passed suite-SmokeTest -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -142,9 +118,9 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-SmokeTest" class="panel SmokeTest">
-          <div class="suite-SmokeTest-class-failed">
+          <div class="suite-SmokeTest-class-passed">
             <div class="main-panel-header rounded-window-top">
-              <img src="failed.png"/>
+              <img src="passed.png"/>
               <span class="class-name">FO_Testcases.TwowayWithAdults</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
@@ -153,130 +129,14 @@
                   <a name="PPRD_NL_B2C">
                   </a> <!-- PPRD_NL_B2C -->
                   <span class="method-name">PPRD_NL_B2C</span>
-                  <div class="stack-trace">org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;button type=&quot;&quot; role=&quot;button&quot; aria-label=&quot;extra options continue button&quot; class=&quot;buttons__button buttons__primary buttons__fill&quot;&gt;...&lt;/button&gt; is not clickable at point (1082, 530). Other element would receive the click: &lt;div class=&quot;LoadingSpinner__overlay&quot; aria-busy=&quot;true&quot;&gt;...&lt;/div&gt;
-  (Session info: chrome=115.0.5790.110)
-Build info: version: &apos;4.10.0&apos;, revision: &apos;c14d967899&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.6&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [cd87f0f789f234321adb103cdd891cc2, clickElement {id=2D32D21B472E54E39C76F3F2DA2F4BBB_element_258}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 115.0.5790.110, chrome: {chromedriverVersion: 115.0.5790.170 (cc0d30c2ca5..., userDataDir: C:\WINDOWS\SystemTemp\scope...}, goog:chromeOptions: {debuggerAddress: localhost:54166}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:54166/devtoo..., se:cdpVersion: 115.0.5790.110, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (cd87f0f789f234321adb103cdd891cc2)] -&gt; xpath: //button[@aria-label=&apos;extra options continue button&apos;]]
-Session ID: cd87f0f789f234321adb103cdd891cc2
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:199)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:132)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:51)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:531)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:242)
-	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:77)
-	at FO_BookFlow.FlightoptionsPage.FlightExtras(FlightoptionsPage.java:83)
-	at FO_Testcases.TwowayWithAdults.PPRD_NL_B2C(TwowayWithAdults.java:307)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 32 stack frames
-</div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-SmokeTest-class-failed -->
-          <div class="suite-SmokeTest-class-failed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="failed.png"/>
-              <span class="class-name">FO_Testcases.MMBflow</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="MMB_PPRD_NL_B2C">
-                  </a> <!-- MMB_PPRD_NL_B2C -->
-                  <span class="method-name">MMB_PPRD_NL_B2C</span>
-                  <div class="stack-trace">java.lang.NullPointerException: Cannot invoke &quot;String.contains(java.lang.CharSequence)&quot; because &quot;deptmonth&quot; is null
-	at AbstractMethods.AbstractComponents.DeptMonth(AbstractComponents.java:142)
-	at FO_MMB.MMBWebsite.MMBLogin_B2C(MMBWebsite.java:334)
-	at FO_MMB.MMBWebsite.MMB_WebsiteLaunchAndBookingDetails_B2C(MMBWebsite.java:133)
-	at FO_MMB.MMBWebsite.MMB_MMBHomepage(MMBWebsite.java:49)
-	at TestComponents.LaunchBrowser.TargetedMMB(LaunchBrowser.java:122)
-	at FO_Testcases.MMBflow.MMB_PPRD_NL_B2C(MMBflow.java:166)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 27 stack frames
-</div> <!-- stack-trace -->
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-SmokeTest-class-failed -->
-          <div class="suite-SmokeTest-class-skipped">
-            <div class="main-panel-header rounded-window-top">
-              <img src="skipped.png"/>
-              <span class="class-name">FO_Testcases.TwowayWithAdults</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="PPRD_NL_B2C">
-                  </a> <!-- PPRD_NL_B2C -->
-                  <span class="method-name">PPRD_NL_B2C</span>
-                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;(//span[contains(@class,&apos;inputs__circle inputs__aligntop&apos;)])[2]&quot;}
-  (Session info: chrome=115.0.5790.110)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: &apos;4.10.0&apos;, revision: &apos;c14d967899&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.6&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [3cd3f6e87e8b822f99e9277adde05f95, findElement {using=xpath, value=(//span[contains(@class,&apos;inputs__circle inputs__aligntop&apos;)])[2]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 115.0.5790.110, chrome: {chromedriverVersion: 115.0.5790.170 (cc0d30c2ca5..., userDataDir: C:\WINDOWS\SystemTemp\scope...}, goog:chromeOptions: {debuggerAddress: localhost:53645}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53645/devtoo..., se:cdpVersion: 115.0.5790.110, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 3cd3f6e87e8b822f99e9277adde05f95
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:199)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:132)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:51)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:531)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:350)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:344)
-	at Common_PaymentPage.PaymentoptionsPage.VisaCardSelection_NL_B2C(PaymentoptionsPage.java:84)
-	at Common_PaymentPage.PaymentMethods.VisaCardPayment_NL(PaymentMethods.java:257)
-	at Common_PaymentPage.PaymentMethods.PaymentMethod_B2C(PaymentMethods.java:111)
-	at Common_PaymentPage.PaymentMethods.BookflowPayment(PaymentMethods.java:45)
-	at FO_Testcases.TwowayWithAdults.PPRD_NL_B2C(TwowayWithAdults.java:313)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 32 stack frames
-</div> <!-- stack-trace -->
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-SmokeTest-class-skipped -->
-          <div class="suite-SmokeTest-class-skipped">
-            <div class="main-panel-header rounded-window-top">
-              <img src="skipped.png"/>
-              <span class="class-name">FO_Testcases.MMBflow</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="MMB_PPRD_NL_B2C">
-                  </a> <!-- MMB_PPRD_NL_B2C -->
-                  <span class="method-name">MMB_PPRD_NL_B2C</span>
-                  <div class="stack-trace">java.lang.NullPointerException: Cannot invoke &quot;String.contains(java.lang.CharSequence)&quot; because &quot;deptmonth&quot; is null
-	at AbstractMethods.AbstractComponents.DeptMonth(AbstractComponents.java:142)
-	at FO_MMB.MMBWebsite.MMBLogin_B2C(MMBWebsite.java:334)
-	at FO_MMB.MMBWebsite.MMB_WebsiteLaunchAndBookingDetails_B2C(MMBWebsite.java:133)
-	at FO_MMB.MMBWebsite.MMB_MMBHomepage(MMBWebsite.java:49)
-	at TestComponents.LaunchBrowser.TargetedMMB(LaunchBrowser.java:122)
-	at FO_Testcases.MMBflow.MMB_PPRD_NL_B2C(MMBflow.java:166)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 27 stack frames
-</div> <!-- stack-trace -->
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-SmokeTest-class-skipped -->
+          </div> <!-- suite-SmokeTest-class-passed -->
         </div> <!-- panel SmokeTest -->
         <div panel-name="test-xml-SmokeTest" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\SrinivasSelenium\SmokeTest_TestNG\testSuites\FailedTCs.xml</span>
+            <span class="header-content">C:\SrinivasSelenium\SmokeTest_TestNG\testSuites\SingleTC.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -295,15 +155,6 @@ Session ID: 3cd3f6e87e8b822f99e9277adde05f95
       &lt;/class&gt; &lt;!-- FO_Testcases.TwowayWithAdults --&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- PPRD Smoketest Bookflow --&gt;
-  &lt;test thread-count=&quot;5&quot; name=&quot;PPRD Smoketest MMB&quot;&gt;
-    &lt;classes&gt;
-      &lt;class name=&quot;FO_Testcases.MMBflow&quot;&gt;
-        &lt;methods&gt;
-          &lt;include name=&quot;MMB_PPRD_NL_B2C&quot;/&gt;
-        &lt;/methods&gt;
-      &lt;/class&gt; &lt;!-- FO_Testcases.MMBflow --&gt;
-    &lt;/classes&gt;
-  &lt;/test&gt; &lt;!-- PPRD Smoketest MMB --&gt;
 &lt;/suite&gt; &lt;!-- SmokeTest --&gt;
             </pre>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -316,9 +167,6 @@ Session ID: 3cd3f6e87e8b822f99e9277adde05f95
             <ul>
               <li>
                 <span class="test-name">PPRD Smoketest Bookflow (1 class)</span>
-              </li>
-              <li>
-                <span class="test-name">PPRD Smoketest MMB (1 class)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -344,28 +192,16 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(4);
+data.addRows(1);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'PPRD_NL_B2C')
 data.setCell(0, 2, 'FO_Testcases.TwowayWithAdults')
-data.setCell(0, 3, 226666);
-data.setCell(1, 0, 1)
-data.setCell(1, 1, 'PPRD_NL_B2C')
-data.setCell(1, 2, 'FO_Testcases.TwowayWithAdults')
-data.setCell(1, 3, 50445);
-data.setCell(2, 0, 2)
-data.setCell(2, 1, 'MMB_PPRD_NL_B2C')
-data.setCell(2, 2, 'FO_Testcases.MMBflow')
-data.setCell(2, 3, 4642);
-data.setCell(3, 0, 3)
-data.setCell(3, 1, 'MMB_PPRD_NL_B2C')
-data.setCell(3, 2, 'FO_Testcases.MMBflow')
-data.setCell(3, 3, 3802);
+data.setCell(0, 3, 96868);
 window.suiteTableData['SmokeTest']= { tableData: data, tableDiv: 'times-div-SmokeTest'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 4 minutes</span>
+              <span class="suite-total-time">Total running time: 1 minutes</span>
               <div id="times-div-SmokeTest">
               </div> <!-- times-div-SmokeTest -->
             </div> <!-- times-div -->
@@ -380,7 +216,7 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-SmokeTest" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">38 ignored methods</span>
+            <span class="header-content">19 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="ignored-class-div">
@@ -426,49 +262,6 @@ return data;
                 <br/>
               </div> <!-- ignored-methods-div -->
             </div> <!-- ignored-class-div -->
-            <div class="ignored-class-div">
-              <span class="ignored-class-name">FO_Testcases.MMBflow</span>
-              <div class="ignored-methods-div">
-                <span class="ignored-method-name">MMB_PPRD_FR_B2C</span>
-                <br/>
-                <span class="ignored-method-name">MMB_SIT_BE_3PA</span>
-                <br/>
-                <span class="ignored-method-name">MMB_PPRD_NL_Inhouse</span>
-                <br/>
-                <span class="ignored-method-name">MMB_PPRD_BE_B2C</span>
-                <br/>
-                <span class="ignored-method-name">MMB_SIT_BE_Inhouse</span>
-                <br/>
-                <span class="ignored-method-name">MMB_PPRD_BE_Inhouse</span>
-                <br/>
-                <span class="ignored-method-name">MMB_PPRD_MA_3PA</span>
-                <br/>
-                <span class="ignored-method-name">MMB_SIT_NL_3PA</span>
-                <br/>
-                <span class="ignored-method-name">MMB_SIT_FR_B2C</span>
-                <br/>
-                <span class="ignored-method-name">MMB_SIT_MA_Inhouse</span>
-                <br/>
-                <span class="ignored-method-name">MMB_SIT_MA_3PA</span>
-                <br/>
-                <span class="ignored-method-name">MMB_SIT_NL_Inhouse</span>
-                <br/>
-                <span class="ignored-method-name">MMB_PPRD_MA_Inhouse</span>
-                <br/>
-                <span class="ignored-method-name">MMB_SIT_BE_B2C</span>
-                <br/>
-                <span class="ignored-method-name">MMB_PPRD_NL_3PA</span>
-                <br/>
-                <span class="ignored-method-name">MMB_PPRD_BE_3PA</span>
-                <br/>
-                <span class="ignored-method-name">MMB_SIT_NL_B2C</span>
-                <br/>
-                <span class="ignored-method-name">MMB_SIT_MA_B2C</span>
-                <br/>
-                <span class="ignored-method-name">MMB_PPRD_MA_B2C</span>
-                <br/>
-              </div> <!-- ignored-methods-div -->
-            </div> <!-- ignored-class-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="chronological-SmokeTest" class="panel">
@@ -481,25 +274,6 @@ return data;
               <div class="test-method">
                 <span class="method-name">PPRD_NL_B2C</span>
                 <span class="method-start">0 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <img src="failed.png">
-                </img>
-                <span class="method-name">PPRD_NL_B2C</span>
-                <span class="method-start">226682 ms</span>
-              </div> <!-- test-method -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">FO_Testcases.MMBflow</div> <!-- chronological-class-name -->
-              <div class="test-method">
-                <span class="method-name">MMB_PPRD_NL_B2C</span>
-                <span class="method-start">278185 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <img src="failed.png">
-                </img>
-                <span class="method-name">MMB_PPRD_NL_B2C</span>
-                <span class="method-start">282827 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

@@ -125,13 +125,15 @@ public class LaunchBrowser {
 	public static String GetScreenshot(String TestCaseName, WebDriver driver) throws IOException 
 	{
 		String timeStamp = new SimpleDateFormat("yyyy.MM.dd").format(new Date());
-		String timeStamp2 = new SimpleDateFormat("HH.mm.ss").format(new Date());
+		String timeStamp2 = new SimpleDateFormat("HH.mm").format(new Date());
 		
 		TakesScreenshot ts = (TakesScreenshot)driver;
 		File source = ts.getScreenshotAs(OutputType.FILE);
 		File file = new File (System.getProperty("user.dir")+ "//Reports//ErrorScreenshots//" + timeStamp + "//" + timeStamp2 + "//" + TestCaseName + ".png");
+//		File file = new File ("C://Users//Admin//OneDrive - TUI//Smoke Reports//ErrorScreenshots//" + timeStamp + "//" + timeStamp2 + "//" + TestCaseName + ".png");
 		FileUtils.copyFile(source, file);
-		return System.getProperty("user.dir")+ "//reports//ErrorScreenshots//" + timeStamp + "//" + timeStamp2 + "//" + TestCaseName + ".png";
+		return System.getProperty("user.dir")+ "//Reports//ErrorScreenshots//" + timeStamp + "//" + timeStamp2 + "//" + TestCaseName + ".png";
+//		return "C://Users//Admin//OneDrive - TUI//Smoke Reports//ErrorScreenshots//" + timeStamp + "//" + timeStamp2 + "//" + TestCaseName + ".png";
 		
 	}
 	
