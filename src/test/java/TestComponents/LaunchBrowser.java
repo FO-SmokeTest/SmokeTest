@@ -45,7 +45,9 @@ public class LaunchBrowser {
 		FileInputStream fis = new FileInputStream (	System.getProperty("user.dir") + "//src//main//java//Resources//GlobalData.properties");
 		prop.load(fis);
 		
-		String browser = prop.getProperty("browser");
+		String browser = System.getProperty("browser")!=null ? System.getProperty("browser") : prop.getProperty("browser");
+		
+//		String browser = prop.getProperty("browser");
 		
 		if(browser.equalsIgnoreCase("Chrome")) 
 		{
@@ -127,13 +129,20 @@ public class LaunchBrowser {
 		String timeStamp = new SimpleDateFormat("yyyy.MM.dd").format(new Date());
 		String timeStamp2 = new SimpleDateFormat("HH.mm").format(new Date());
 		
-		TakesScreenshot ts = (TakesScreenshot)driver;
-		File source = ts.getScreenshotAs(OutputType.FILE);
-		File file = new File (System.getProperty("user.dir")+ "//Reports//ErrorScreenshots//" + timeStamp + "//" + timeStamp2 + "//" + TestCaseName + ".png");
-//		File file = new File ("C://Users//Admin//OneDrive - TUI//Smoke Reports//ErrorScreenshots//" + timeStamp + "//" + timeStamp2 + "//" + TestCaseName + ".png");
-		FileUtils.copyFile(source, file);
-		return System.getProperty("user.dir")+ "//Reports//ErrorScreenshots//" + timeStamp + "//" + timeStamp2 + "//" + TestCaseName + ".png";
-//		return "C://Users//Admin//OneDrive - TUI//Smoke Reports//ErrorScreenshots//" + timeStamp + "//" + timeStamp2 + "//" + TestCaseName + ".png";
+		try {
+			TakesScreenshot ts = (TakesScreenshot)driver;
+			File source = ts.getScreenshotAs(OutputType.FILE);
+//		    File file = new File (System.getProperty("user.dir")+ "//Reports//ErrorScreenshots//" + timeStamp + "//" + timeStamp2 + "//" + TestCaseName + ".png");
+			File file = new File ("C://Users//Admin//OneDrive - TUI//Smoke Reports//ErrorScreenshots//" + timeStamp + "//" + timeStamp2 + "//" + TestCaseName + ".png");
+			FileUtils.copyFile(source, file);
+			
+		} catch (Exception e1) {
+			
+			e1.printStackTrace();
+		} 
+		
+//		return System.getProperty("user.dir")+ "//Reports//ErrorScreenshots//" + timeStamp + "//" + timeStamp2 + "//" + TestCaseName + ".png";
+		return "C://Users//Admin//OneDrive - TUI//Smoke Reports//ErrorScreenshots//" + timeStamp + "//" + timeStamp2 + "//" + TestCaseName + ".png";
 		
 	}
 	

@@ -3,7 +3,7 @@
 <suite name="SmokeTest">
 	<listeners>
 		<listener class-name="TestComponents.Listeners"></listener>
-	</listeners>
+	</listeners> 
   <test thread-count="5" name="PPRD Smoketest Bookflow">
     <classes>
       <class name="FO_Testcases.TwowayWithAdults">

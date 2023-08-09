@@ -55,13 +55,17 @@ public static String JourneyType;
         WebElement OutboundSearch = shadowHost().findElement(By.cssSelector(xpathsFO_BookFlow.cssSelector_OutboundSearch));
         waitForWebElement(OutboundSearch);
         OutboundSearch.click();
-        shadowHost().findElement(By.partialLinkText(outbound)).click();
+        String OutboundCSS = "#" + outbound;
+        shadowHost().findElement(By.cssSelector(OutboundCSS)).click();
+//        shadowHost().findElement(By.partialLinkText(outbound)).click();
     
       //Selecting Inbound flight
         WebElement InboundSearch = shadowHost().findElement(By.cssSelector(xpathsFO_BookFlow.cssSelector_InboundSearch));
         waitForWebElement(InboundSearch);
         InboundSearch.click();
-        shadowHost().findElement(By.partialLinkText(inbound)).click();
+        String InboundCSS = "#allAirports #" + inbound;
+        shadowHost().findElement(By.cssSelector(InboundCSS)).click();
+//        shadowHost().findElement(By.partialLinkText(inbound)).click();
     
         System.out.println("Outbound airport: "+ outbound +" and Inbound airport: "+ inbound);
     

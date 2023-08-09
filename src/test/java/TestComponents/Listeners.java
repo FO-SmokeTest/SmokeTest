@@ -55,13 +55,11 @@ public class Listeners extends LaunchBrowser implements ITestListener {
 	@Override
 	public void onTestFailure(ITestResult result) {
 		
-		
-		excenttest.get().fail("Testcase failed at: " + driver.getCurrentUrl());
-		excenttest.get().fail(result.getThrowable());
-		
 		try 
 		{
 			driver = (WebDriver) result.getTestClass().getRealClass().getField("driver").get(result.getInstance());
+			excenttest.get().fail("Testcase failed at: " + driver.getCurrentUrl());
+			excenttest.get().fail(result.getThrowable());
 		} 
 		catch (Exception e1) {
 			e1.printStackTrace();

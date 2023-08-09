@@ -8,7 +8,7 @@
     <classes>
       <class name="FO_Testcases.TwowayWithAdults">
 		  <methods>
-			  <include name="PPRD_NL_B2C"/>
+			  <include name="PPRD_BE_B2C"/>
 		  </methods>
       </class>
     </classes>
