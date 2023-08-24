@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="FO_Testcases.TwowayWithAdults">
+      <class name="Smoke_TCs.PPRD_SmokeTCs">
         <methods>
           <include name="PPRD_NL_Inhouse"/>
         </methods>
-      </class> <!-- FO_Testcases.TwowayWithAdults -->
+      </class> <!-- Smoke_TCs.PPRD_SmokeTCs -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

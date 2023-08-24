@@ -6,7 +6,7 @@
 	</listeners> 
   <test thread-count="5" name="PPRD Smoketest Bookflow">
     <classes>
-      <class name="FO_Testcases.TwowayWithAdults">
+      <class name="Smoke_TCs.PPRD_SmokeTCs">
 		  <methods>
 			  <include name="PPRD_BE_B2C"/>
 			  <include name="PPRD_NL_B2C"/>
@@ -24,7 +24,7 @@
   </test>
   <test thread-count="5" name="PPRD Smoketest MMB">
     <classes>
-      <class name="FO_Testcases.MMBflow">
+      <class name="Smoke_TCs.PPRD_SmokeTCs">
 		  <methods>
 			  <include name="MMB_PPRD_BE_B2C"/>
 			  <include name="MMB_PPRD_NL_B2C"/>

@@ -48,6 +48,7 @@ public class Listeners extends LaunchBrowser implements ITestListener {
 			excenttest.get().pass(ConfirmationPage.PrintBaggageReport());
 			excenttest.get().pass(ConfirmationPage.PrintSportSSRReport());
 			excenttest.get().pass(ConfirmationPage.PrintPetSSRReport());
+			excenttest.get().pass(ConfirmationPage.PrintInsuranceReport());
 		}
 		
 	}

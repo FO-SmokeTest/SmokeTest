@@ -9,9 +9,22 @@ public class xpathsFO_BookFlow {
 		
 	//Search panel shadow host and search panel elements	
 	public static String cssSelector_ShadowHost_BE = "tui-flight-search-bar[lang='nl-BE']";
+	
+	//Payment card selection
+	public static String xpath_SofortSelection = "//p[normalize-space()='Sofort']/preceding::span[contains(@class,'inputs__circle inputs__aligntop')][1]";
+	public static String xpath_AmexCardSelection = "//p[normalize-space()='American Express']/preceding::span[contains(@class,'inputs__circle inputs__aligntop')][1]";
+	public static String xpath_BancontactSelection = "//p[normalize-space()='Bancontact/MisterCash']/preceding::span[contains(@class,'inputs__circle inputs__aligntop')][1]";
+	public static String xpath_MaestroCardSelection = "//p[normalize-space()='Maestro']/preceding::span[contains(@class,'inputs__circle inputs__aligntop')][1]";
+	public static String xpath_MasterCardSelection = "//p[normalize-space()='MasterCard']/preceding::span[contains(@class,'inputs__circle inputs__aligntop')][1]";
+	public static String xpath_IdealSelection = "//p[normalize-space()='iDeal']/preceding::span[contains(@class,'inputs__circle inputs__aligntop')][1]";
+	public static String xpath_VisaCardSelection = "//p[normalize-space()='VISA']/preceding::span[contains(@class,'inputs__circle inputs__aligntop')][1]";
+	public static String xpath_VisaCardSelection_NL = "//p[normalize-space()='Visa']/preceding::span[contains(@class,'inputs__circle inputs__aligntop')][1]";
+    public static String xpath_CmiSelection_MAinMAD = "//p[normalize-space()='CMI']/preceding::span[contains(@class,'inputs__circle inputs__aligntop')][1]";
+    public static String xpath_VisaCardSelection_MAinMAD = "//p[normalize-space()='Visa']/preceding::span[contains(@class,'inputs__circle inputs__aligntop')][1]";
+	
 
-	//Visa card payment
-	public static String xpath_VisaCardSelection_BE ="(//span[contains(@class,'inputs__circle inputs__aligntop')])[7]";
+	//BE payment completion
+//	public static String xpath_VisaCardSelection_BE ="(//span[contains(@class,'inputs__circle inputs__aligntop')])[7]";
 	public static String xpath_VisaCardName_BE = "//input[@id='Ecom_Payment_Card_Name']";
 	public static String xpath_VisaCardNumber_BE = "//input[@id='Ecom_Payment_Card_Number']";
 	public static String xpath_VisaExpiryMonth_BE = "//select[@id='Ecom_Payment_Card_ExpDate_Month']";
@@ -19,10 +32,10 @@ public class xpathsFO_BookFlow {
 	public static String xpath_VisaCVV_BE = "//input[@id='Ecom_Payment_Card_Verification']";
 	public static String xpath_PaymentConfirm_BE = "(//input[@id='submit3'])[1]";
 
-	public static String xpath_SofortSelection_BE = "(//span[contains(@class,'inputs__circle inputs__aligntop')])[1]";
+//	public static String xpath_SofortSelection_BE = "(//span[contains(@class,'inputs__circle inputs__aligntop')])[1]";
 	public static String xpath_sofortPaymentConfirm_BE = "//input[@id='btn_Accept']";
 
-	public static String xpath_IdealPaymentSelection_BE = "(//span[contains(@class,'inputs__circle inputs__aligntop')])[9]";
+//	public static String xpath_IdealPaymentSelection_BE = "(//span[contains(@class,'inputs__circle inputs__aligntop')])[9]";
 	public static String xpath_IdealBankSelection_BE = "//select[@title='Selecteer uw bank']";  //TST iDEAL
 	public static String xpath_IdealBankContinue_BE = "//input[@id='btn_Continue']";
 	public static String xpath_IdealPaymentSuccess_BE = "//input[@id='btn_Accept']";
@@ -36,15 +49,15 @@ public class xpathsFO_BookFlow {
 	//Search panel shadow host and search panel elements
 	public static String cssSelector_ShadowHost_NL = "tui-flight-search-bar[lang='nl-NL']";
 
-	//Visa card payment
-	public static String xpath_VisaCardSelection_NL = "(//span[contains(@class,'inputs__circle inputs__aligntop')])[2]";
+	//NL payment completion
+//	public static String xpath_VisaCardSelection_NL = "(//span[contains(@class,'inputs__circle inputs__aligntop')])[2]";
 	public static String xpath_VisaCardNumber_NL = "(//input[@Class='form-control form-control-inline'])";
 	public static String xpath_VisaExpiryMonth_NL = "//select[@id='expdatemonth']";
 	public static String xpath_VisaExpireYear_NL = "//select[@id='expdateyear']";
 	public static String xpath_VisaCVV_NL = "(//input[@Class='form-control form-control-sm form-control-inline'])";
 	public static String xpath_PaymentConfirm_NL = "//input[@id='submitCC']";
 
-	public static String xpath_IdealPaymentSelection_NL = "(//span[contains(@class,'inputs__circle inputs__aligntop')])[1]";
+//	public static String xpath_IdealPaymentSelection_NL = "(//span[contains(@class,'inputs__circle inputs__aligntop')])[1]";
 	public static String xpath_IdealBankSelection_NL = "//select[@id='bankId']";  //ING
 	public static String xpath_IdealBankContinue_NL = "//input[@id='submitOB']";
 	public static String xpath_IdealPaymentSuccess_NL = "//input[@value='Accept payment']";
@@ -60,8 +73,8 @@ public class xpathsFO_BookFlow {
 
 	public static String xpath_MADSelection = "//select[@aria-label='Select']";     //MAD
 
-	//Visa card payment
-	public static String xpath_VisaCardSelection_MAinMAD = "(//span[contains(@class,'inputs__circle inputs__aligntop')])[4]";
+	//MA payment completion
+//	public static String xpath_VisaCardSelection_MAinMAD = "(//span[contains(@class,'inputs__circle inputs__aligntop')])[4]";
 	public static String xpath_VisaCardName_MAinMAD = "(//input[@id='cardHolderName'])[1]";
 	public static String xpath_VisaCardNumber_MAinMAD = "(//input[@id='pan'])[1]";
 	public static String xpath_VisaExpiryMonth_MAinMAD = "//select[@id='date-validite']";
@@ -71,9 +84,6 @@ public class xpathsFO_BookFlow {
 	public static String xpath_PaymentConfirm_MAinMAD = "//button[normalize-space()='Valider le paiement']";
 
 	public static String xpath_ConfirmationpageAppear_MAinMAD = "//a[@id='retour']";
-
-
-	public static String xpath_VisaCardSelection_FR = "(//span[contains(@class,'inputs__circle inputs__aligntop')])[5]";
 
 
 
@@ -222,13 +232,21 @@ public class xpathsFO_BookFlow {
 	public static String xpath_DateOfDOB_Pax2 = "(//input[@aria-label='day'])[2]";
 	public static String xpath_MonthOfDOB_Pax2 = "(//input[@aria-label='month'])[2]";
 	public static String xpath_YearOfDOB_Pax2 = "(//input[@aria-label='year'])[2]";
-	public static String xpath_InsuranceRecalculation = "//button[@aria-label='button']";
-	public static String xpath_CombiInsurance = "(//span[@class='InsuranceType__copy'])[4]";
-	public static String xpath_SelectingCombiInsurancePax1 = "(//div[@class='InsuranceType__insuranceTypes'][4] //span[@class='PerPersonSelectList__checkbox'])[1]";
-	public static String xpath_SelectingCombiInsurancePax2 = "(//div[@class='InsuranceType__insuranceTypes'][4] //span[@class='PerPersonSelectList__checkbox'])[2]";
+	public static String xpath_InsuranceRecalculation = "(//button[@aria-label='button'])[1]";
 	
+	//With old Insurance format
+	public static String xpath_CombiInsurance = "(//span[@class='InsuranceType__copy'])[3]";
+	public static String xpath_SelectingCombiInsurance = "(//div[@class='rah-static rah-static--height-auto'] //button[@role='button'])[1]";
 	public static String xpath_ContinueFromExtraOptionsPage = "//button[@aria-label='extra options continue button']";
-	public static String xpath_InsuranceConfirm = "//button[@aria-label='action apply']";
+	
+	//With per person Insurance selection
+//	public static String xpath_CombiInsurance = "(//span[@class='InsuranceType__copy'])[4]";
+//	public static String xpath_SelectingCombiInsurancePax1 = "(//div[@class='InsuranceType__insuranceTypes'][4] //span[@class='PerPersonSelectList__checkbox'])[1]";
+//	public static String xpath_SelectingCombiInsurancePax2 = "(//div[@class='InsuranceType__insuranceTypes'][4] //span[@class='PerPersonSelectList__checkbox'])[2]";
+//	public static String xpath_InsuranceConfirm = "(//button[@aria-label='button'])[2]";
+//	public static String xpath_InsurancePopupConfirm = "//footer [@class='Modal__modalFooter '] //button[@aria-label='action apply']";
+	
+	
 
 	//Flight, Extra and Passenger page load verification
 	public static String xpath_FlightExtraPassengerPageLoadVerification = "//div[@class='HubAndSpokeStepIndicator__stepIndicatorWrapper']";
@@ -246,7 +264,7 @@ public class xpathsFO_BookFlow {
 	public static String xpath_City = "(//input[@id='TOWNADULT1'])[1]";
 	public static String xpath_PhoneNo = "(//input[@id='MOBILENUMBERADULT1'])[1]";
 	public static String xpath_Email = "(//input[@id='EMAILADDRESSADULT1'])[1]";
-	public static String xpath_EmargencyName = "(//input[@id='SURNAMEnull1'])[1]";
+	public static String xpath_EmargencyName = "(//input[@name='stayHomelastName'])[1]";
 	public static String xpath_EmargencyNo = "(//input[@id='MOBILENUMBERnull1'])[1]";
 	public static String xpath_PassengerdetailsCheckbox = "//div[@class='UI__important_info_wrap']//span[@class='inputs__box']//*[name()='svg']";
 

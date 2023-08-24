@@ -19,6 +19,7 @@ public class ConfirmationPage extends AbstractComponents {
 	public static String SelectedBaggage;
 	public static String SelectedSportsSSR;
 	public static String SelectedPetSSR;
+	public static String SelectedInsurance;
 	
 
 	@SuppressWarnings("static-access")
@@ -51,6 +52,7 @@ public class ConfirmationPage extends AbstractComponents {
 		SelectedBaggage = null;
 		SelectedSportsSSR = null;
 		SelectedPetSSR = null;
+		SelectedInsurance = null;
 
 		waitForElementPresent(By.xpath(xpathsFO_BookFlow.xpath_BookingRefInConfirmationPage));
 		BookingRef = driver.findElement(By.xpath(xpathsFO_BookFlow.xpath_BookingRefInConfirmationPage)).getText();
@@ -67,6 +69,7 @@ public class ConfirmationPage extends AbstractComponents {
 		SelectedBaggage = FlightoptionsPage.Baggage;
 		SelectedSportsSSR = FlightoptionsPage.SportSSR;
 		SelectedPetSSR = FlightoptionsPage.PetSSR;
+		SelectedInsurance = ExtraoptionsPage.Insurance;
 				
 		System.out.println("----------**********----------");
 		System.out.println( BookflowWebsite.website + " - " + SearchPage.JourneyType + " Reservation got success...");
@@ -84,6 +87,8 @@ public class ConfirmationPage extends AbstractComponents {
 		
 		
 		FO_MMB.ReservationDetails.ReservationStore(BookflowWebsite.website);
+		
+		driver.close();
 	}
 	
 	public static String PrintBookingRefinReport() 
@@ -125,6 +130,13 @@ public class ConfirmationPage extends AbstractComponents {
 	{
 		String PetSSR = "PetSSR details: " + SelectedPetSSR;
 		return PetSSR;
+		
+	}
+	
+	public static String PrintInsuranceReport() 
+	{
+		String Insurance = "Insurance details: " + SelectedInsurance;
+		return Insurance;
 		
 	}
 

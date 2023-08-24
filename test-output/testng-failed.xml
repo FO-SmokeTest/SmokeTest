@@ -6,11 +6,28 @@
   </listeners>
   <test thread-count="5" name="PPRD Smoketest Bookflow(failed)">
     <classes>
-      <class name="FO_Testcases.TwowayWithAdults">
+      <class name="Smoke_TCs.PPRD_SmokeTCs">
         <methods>
-          <include name="PPRD_NL_B2C"/>
+          <include name="PPRD_BE_Inhouse"/>
+          <include name="PPRD_MA_B2C"/>
+          <include name="PPRD_NL_3PA"/>
         </methods>
-      </class> <!-- FO_Testcases.TwowayWithAdults -->
+      </class> <!-- Smoke_TCs.PPRD_SmokeTCs -->
     </classes>
   </test> <!-- PPRD Smoketest Bookflow(failed) -->
+  <test thread-count="5" name="PPRD Smoketest MMB(failed)">
+    <classes>
+      <class name="Smoke_TCs.PPRD_SmokeTCs">
+        <methods>
+          <include name="MMB_PPRD_FR_B2C"/>
+          <include name="MMB_PPRD_BE_3PA"/>
+          <include name="MMB_PPRD_BE_Inhouse"/>
+          <include name="MMB_PPRD_BE_B2C"/>
+          <include name="MMB_PPRD_MA_B2C"/>
+          <include name="MMB_PPRD_NL_B2C"/>
+          <include name="MMB_PPRD_NL_3PA"/>
+        </methods>
+      </class> <!-- Smoke_TCs.PPRD_SmokeTCs -->
+    </classes>
+  </test> <!-- PPRD Smoketest MMB(failed) -->
 </suite> <!-- Failed suite [SmokeTest] -->

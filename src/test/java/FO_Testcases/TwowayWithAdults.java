@@ -32,7 +32,7 @@ public class TwowayWithAdults extends LaunchBrowser {
 		
 		FO_BookFlow.SearchPage.SearchAirports(prop.getProperty("SITB2CBEDeparture"), prop.getProperty("SITB2CBEArrival"));
 		
-		FO_BookFlow.SearchPage.BothOutAndInbounddate(prop.getProperty("SITB2CBEDepartureMonth"), prop.getProperty("SITB2CBEDepartureDate"), prop.getProperty("SITB2CBEArrivalMonth"), prop.getProperty("SITB2CBEArrivalDate"));
+		FO_BookFlow.SearchPage.BothOutAndInbounddate(prop.getProperty("SITB2CBEDepartureMonth"), prop.getProperty("SITB2CBEDepartureDate"));
 		
 		FO_BookFlow.SearchPage.PassengersAdults(prop.getProperty("passengers2")); 
 		
@@ -57,7 +57,7 @@ public class TwowayWithAdults extends LaunchBrowser {
 
 		FO_BookFlow.SearchPage.SearchAirports(prop.getProperty("SITB2CNLDeparture"), prop.getProperty("SITB2CNLArrival"));
 
-		FO_BookFlow.SearchPage.BothOutAndInbounddate(prop.getProperty("SITB2CNLDepartureMonth"), prop.getProperty("SITB2CNLDepartureDate"), prop.getProperty("SITB2CNLArrivalMonth"), prop.getProperty("SITB2CNLArrivalDate"));
+		FO_BookFlow.SearchPage.BothOutAndInbounddate(prop.getProperty("SITB2CNLDepartureMonth"), prop.getProperty("SITB2CNLDepartureDate"));
 
 		FO_BookFlow.SearchPage.PassengersAdults(prop.getProperty("passengers2"));
 		
@@ -82,7 +82,7 @@ public class TwowayWithAdults extends LaunchBrowser {
 		
 		FO_BookFlow.SearchPage.SearchAirports(prop.getProperty("SITB2CFRDeparture"), prop.getProperty("SITB2CFRArrival"));
 		
-		FO_BookFlow.SearchPage.BothOutAndInbounddate(prop.getProperty("SITB2CFRDepartureMonth"), prop.getProperty("SITB2CFRDepartureDate"), prop.getProperty("SITB2CFRArrivalMonth"), prop.getProperty("SITB2CFRArrivalDate"));
+		FO_BookFlow.SearchPage.BothOutAndInbounddate(prop.getProperty("SITB2CFRDepartureMonth"), prop.getProperty("SITB2CFRDepartureDate"));
 		
 		FO_BookFlow.SearchPage.PassengersAdults(prop.getProperty("passengers2")); 
 		
@@ -107,7 +107,7 @@ public class TwowayWithAdults extends LaunchBrowser {
 
 		FO_BookFlow.SearchPage.SearchAirports(prop.getProperty("SITB2CMADeparture"), prop.getProperty("SITB2CMAArrival"));
 
-		FO_BookFlow.SearchPage.BothOutAndInbounddate(prop.getProperty("SITB2CMADepartureMonth"), prop.getProperty("SITB2CMADepartureDate"), prop.getProperty("SITB2CMAArrivalMonth"), prop.getProperty("SITB2CMAArrivalDate"));
+		FO_BookFlow.SearchPage.BothOutAndInbounddate(prop.getProperty("SITB2CMADepartureMonth"), prop.getProperty("SITB2CMADepartureDate"));
 
 		FO_BookFlow.SearchPage.PassengersAdults(prop.getProperty("passengers2")); 
 		
@@ -130,7 +130,7 @@ public class TwowayWithAdults extends LaunchBrowser {
 		
 		FO_BookFlow.SearchPage.SearchAirports(prop.getProperty("SITInhouseBEDeparture"), prop.getProperty("SITInhouseBEArrival"));
 		
-		FO_BookFlow.SearchPage.BothOutAndInbounddate(prop.getProperty("SITInhouseBEDepartureMonth"), prop.getProperty("SITInhouseBEDepartureDate"), prop.getProperty("SITInhouseBEArrivalMonth"), prop.getProperty("SITInhouseBEArrivalDate"));
+		FO_BookFlow.SearchPage.BothOutAndInbounddate(prop.getProperty("SITInhouseBEDepartureMonth"), prop.getProperty("SITInhouseBEDepartureDate"));
 
 		FO_BookFlow.SearchPage.PassengersAdults(prop.getProperty("passengers2"));
 		
@@ -155,7 +155,7 @@ public class TwowayWithAdults extends LaunchBrowser {
 
 		FO_BookFlow.SearchPage.SearchAirports(prop.getProperty("SITInhouseNLDeparture"), prop.getProperty("SITInhouseNLArrival"));
 
-		FO_BookFlow.SearchPage.BothOutAndInbounddate(prop.getProperty("SITInhouseNLDepartureMonth"), prop.getProperty("SITInhouseNLDepartureDate"), prop.getProperty("SITInhouseNLArrivalMonth"), prop.getProperty("SITInhouseNLArrivalDate"));
+		FO_BookFlow.SearchPage.BothOutAndInbounddate(prop.getProperty("SITInhouseNLDepartureMonth"), prop.getProperty("SITInhouseNLDepartureDate"));
 
 		FO_BookFlow.SearchPage.PassengersAdults(prop.getProperty("passengers2"));
 		
@@ -180,7 +180,7 @@ public class TwowayWithAdults extends LaunchBrowser {
 
 		FO_BookFlow.SearchPage.SearchAirports(prop.getProperty("SITInhouseMADeparture"), prop.getProperty("SITInhouseMAArrival"));
 
-		FO_BookFlow.SearchPage.BothOutAndInbounddate(prop.getProperty("SITInhouseMADepartureMonth"), prop.getProperty("SITInhouseMADepartureDate"), prop.getProperty("SITInhouseMAArrivalMonth"), prop.getProperty("SITInhouseMAArrivalDate"));
+		FO_BookFlow.SearchPage.BothOutAndInbounddate(prop.getProperty("SITInhouseMADepartureMonth"), prop.getProperty("SITInhouseMADepartureDate"));
 
 		FO_BookFlow.SearchPage.PassengersAdults(prop.getProperty("passengers2"));
 		
@@ -205,7 +205,7 @@ public class TwowayWithAdults extends LaunchBrowser {
 
 		FO_BookFlow.SearchPage.SearchAirports(prop.getProperty("SITThirdPartyBEDeparture"), prop.getProperty("SITThirdPartyBEArrival"));
 
-		FO_BookFlow.SearchPage.BothOutAndInbounddate(prop.getProperty("SITThirdPartyBEDepartureMonth"), prop.getProperty("SITThirdPartyBEDepartureDate"), prop.getProperty("SITThirdPartyBEArrivalMonth"), prop.getProperty("SITThirdPartyBEArrivalDate"));
+		FO_BookFlow.SearchPage.BothOutAndInbounddate(prop.getProperty("SITThirdPartyBEDepartureMonth"), prop.getProperty("SITThirdPartyBEDepartureDate"));
 
 		FO_BookFlow.SearchPage.PassengersAdults(prop.getProperty("passengers2"));
 		
@@ -228,7 +228,7 @@ public class TwowayWithAdults extends LaunchBrowser {
 
 		FO_BookFlow.SearchPage.SearchAirports(prop.getProperty("SITThirdPartyNLDeparture"), prop.getProperty("SITThirdPartyNLArrival"));
 
-		FO_BookFlow.SearchPage.BothOutAndInbounddate(prop.getProperty("SITThirdPartyNLDepartureMonth"), prop.getProperty("SITThirdPartyNLDepartureDate"), prop.getProperty("SITThirdPartyNLArrivalMonth"), prop.getProperty("SITThirdPartyNLArrivalDate"));
+		FO_BookFlow.SearchPage.BothOutAndInbounddate(prop.getProperty("SITThirdPartyNLDepartureMonth"), prop.getProperty("SITThirdPartyNLDepartureDate"));
 
 		FO_BookFlow.SearchPage.PassengersAdults(prop.getProperty("passengers2"));
 		
@@ -251,7 +251,7 @@ public class TwowayWithAdults extends LaunchBrowser {
 
 		FO_BookFlow.SearchPage.SearchAirports(prop.getProperty("SITThirdPartyMADeparture"), prop.getProperty("SITThirdPartyMAArrival"));
 
-		FO_BookFlow.SearchPage.BothOutAndInbounddate(prop.getProperty("SITThirdPartyMADepartureMonth"), prop.getProperty("SITThirdPartyMADepartureDate"), prop.getProperty("SITThirdPartyMAArrivalMonth"), prop.getProperty("SITThirdPartyMAArrivalDate"));
+		FO_BookFlow.SearchPage.BothOutAndInbounddate(prop.getProperty("SITThirdPartyMADepartureMonth"), prop.getProperty("SITThirdPartyMADepartureDate"));
 
 		FO_BookFlow.SearchPage.PassengersAdults(prop.getProperty("passengers2"));
 		
@@ -275,7 +275,7 @@ public class TwowayWithAdults extends LaunchBrowser {
 
 		FO_BookFlow.SearchPage.SearchAirports(prop.getProperty("PPRDB2CBEDeparture"), prop.getProperty("PPRDB2CBEArrival"));
 
-		FO_BookFlow.SearchPage.BothOutAndInbounddate(prop.getProperty("PPRDB2CBEDepartureMonth"), prop.getProperty("PPRDB2CBEDepartureDate"), prop.getProperty("PPRDB2CBEArrivalMonth"), prop.getProperty("PPRDB2CBEArrivalDate"));
+		FO_BookFlow.SearchPage.BothOutAndInbounddate(prop.getProperty("PPRDB2CBEDepartureDay"), prop.getProperty("PPRDB2CBEArrivalDay"));
 
 		FO_BookFlow.SearchPage.PassengersAdults(prop.getProperty("passengers2"));
 		
@@ -300,7 +300,7 @@ public class TwowayWithAdults extends LaunchBrowser {
 
 		FO_BookFlow.SearchPage.SearchAirports(prop.getProperty("PPRDB2CNLDeparture"), prop.getProperty("PPRDB2CNLArrival"));
 
-		FO_BookFlow.SearchPage.BothOutAndInbounddate(prop.getProperty("PPRDB2CNLDepartureMonth"), prop.getProperty("PPRDB2CNLDepartureDate"), prop.getProperty("PPRDB2CNLArrivalMonth"), prop.getProperty("PPRDB2CNLArrivalDate"));
+		FO_BookFlow.SearchPage.BothOutAndInbounddate(prop.getProperty("PPRDB2CNLDepartureDay"), prop.getProperty("PPRDB2CNLArrivalDay"));
 
 		FO_BookFlow.SearchPage.PassengersAdults(prop.getProperty("passengers2"));
 		
@@ -325,7 +325,7 @@ public class TwowayWithAdults extends LaunchBrowser {
 
 		FO_BookFlow.SearchPage.SearchAirports(prop.getProperty("PPRDB2CFRDeparture"), prop.getProperty("PPRDB2CFRArrival"));
 
-		FO_BookFlow.SearchPage.BothOutAndInbounddate(prop.getProperty("PPRDB2CFRDepartureMonth"), prop.getProperty("PPRDB2CFRDepartureDate"), prop.getProperty("PPRDB2CFRArrivalMonth"), prop.getProperty("PPRDB2CFRArrivalDate"));
+		FO_BookFlow.SearchPage.BothOutAndInbounddate(prop.getProperty("PPRDB2CFRDepartureDay"), prop.getProperty("PPRDB2CFRArrivalDay"));
 
 		FO_BookFlow.SearchPage.PassengersAdults(prop.getProperty("passengers2"));
 		
@@ -350,7 +350,7 @@ public class TwowayWithAdults extends LaunchBrowser {
 
 		FO_BookFlow.SearchPage.SearchAirports(prop.getProperty("PPRDB2CMADeparture"), prop.getProperty("PPRDB2CMAArrival"));
 
-		FO_BookFlow.SearchPage.BothOutAndInbounddate(prop.getProperty("PPRDB2CMADepartureMonth"), prop.getProperty("PPRDB2CMADepartureDate"), prop.getProperty("PPRDB2CMAArrivalMonth"), prop.getProperty("PPRDB2CMAArrivalDate"));
+		FO_BookFlow.SearchPage.BothOutAndInbounddate(prop.getProperty("PPRDB2CMADepartureDay"), prop.getProperty("PPRDB2CMAArrivalDay"));
 
 		FO_BookFlow.SearchPage.PassengersAdults(prop.getProperty("passengers2"));
 		
@@ -373,7 +373,7 @@ public class TwowayWithAdults extends LaunchBrowser {
 
 		FO_BookFlow.SearchPage.SearchAirports(prop.getProperty("PPRDInhouseBEDeparture"), prop.getProperty("PPRDInhouseBEArrival"));
 
-		FO_BookFlow.SearchPage.BothOutAndInbounddate(prop.getProperty("PPRDInhouseBEDepartureMonth"), prop.getProperty("PPRDInhouseBEDepartureDate"), prop.getProperty("PPRDInhouseBEArrivalMonth"), prop.getProperty("PPRDInhouseBEArrivalDate"));
+		FO_BookFlow.SearchPage.BothOutAndInbounddate(prop.getProperty("PPRDInhouseBEDepartureDay"), prop.getProperty("PPRDInhouseBEArrivalDay"));
 
 		FO_BookFlow.SearchPage.PassengersAdults(prop.getProperty("passengers2"));
 		
@@ -398,7 +398,7 @@ public class TwowayWithAdults extends LaunchBrowser {
 
 		FO_BookFlow.SearchPage.SearchAirports(prop.getProperty("PPRDInhouseNLDeparture"), prop.getProperty("PPRDInhouseNLArrival"));
 
-		FO_BookFlow.SearchPage.BothOutAndInbounddate(prop.getProperty("PPRDInhouseNLDepartureMonth"), prop.getProperty("PPRDInhouseNLDepartureDate"), prop.getProperty("PPRDInhouseNLArrivalMonth"), prop.getProperty("PPRDInhouseNLArrivalDate"));
+		FO_BookFlow.SearchPage.BothOutAndInbounddate(prop.getProperty("PPRDInhouseNLDepartureDay"), prop.getProperty("PPRDInhouseNLArrivalDay"));
 
 		FO_BookFlow.SearchPage.PassengersAdults(prop.getProperty("passengers2"));
 		
@@ -423,7 +423,7 @@ public class TwowayWithAdults extends LaunchBrowser {
 
 		FO_BookFlow.SearchPage.SearchAirports(prop.getProperty("PPRDInhouseMADeparture"), prop.getProperty("PPRDInhouseMAArrival"));
 
-		FO_BookFlow.SearchPage.BothOutAndInbounddate(prop.getProperty("PPRDInhouseMADepartureMonth"), prop.getProperty("PPRDInhouseMADepartureDate"), prop.getProperty("PPRDInhouseMAArrivalMonth"), prop.getProperty("PPRDInhouseMAArrivalDate"));
+		FO_BookFlow.SearchPage.BothOutAndInbounddate(prop.getProperty("PPRDInhouseMADepartureDay"), prop.getProperty("PPRDInhouseMAArrivalDay"));
 
 		FO_BookFlow.SearchPage.PassengersAdults(prop.getProperty("passengers2"));
 		
@@ -448,7 +448,7 @@ public class TwowayWithAdults extends LaunchBrowser {
 
 		FO_BookFlow.SearchPage.SearchAirports(prop.getProperty("PPRDThirdPartyBEDeparture"), prop.getProperty("PPRDThirdPartyBEArrival"));
 
-		FO_BookFlow.SearchPage.BothOutAndInbounddate(prop.getProperty("PPRDThirdPartyBEDepartureMonth"), prop.getProperty("PPRDThirdPartyBEDepartureDate"), prop.getProperty("PPRDThirdPartyBEArrivalMonth"), prop.getProperty("PPRDThirdPartyBEArrivalDate"));
+		FO_BookFlow.SearchPage.BothOutAndInbounddate(prop.getProperty("PPRDThirdPartyBEDepartureDay"), prop.getProperty("PPRDThirdPartyBEArrivalDay"));
 
 		FO_BookFlow.SearchPage.PassengersAdults(prop.getProperty("passengers2"));
 		
@@ -471,7 +471,7 @@ public class TwowayWithAdults extends LaunchBrowser {
 
 		FO_BookFlow.SearchPage.SearchAirports(prop.getProperty("PPRDThirdPartyNLDeparture"), prop.getProperty("PPRDThirdPartyNLArrival"));
 
-		FO_BookFlow.SearchPage.BothOutAndInbounddate(prop.getProperty("PPRDThirdPartyNLDepartureMonth"), prop.getProperty("PPRDThirdPartyNLDepartureDate"), prop.getProperty("PPRDThirdPartyNLArrivalMonth"), prop.getProperty("PPRDThirdPartyNLArrivalDate"));
+		FO_BookFlow.SearchPage.BothOutAndInbounddate(prop.getProperty("PPRDThirdPartyNLDepartureDay"), prop.getProperty("PPRDThirdPartyNLArrivalDay"));
 
 		FO_BookFlow.SearchPage.PassengersAdults(prop.getProperty("passengers2"));
 		
@@ -494,7 +494,7 @@ public class TwowayWithAdults extends LaunchBrowser {
 
 		FO_BookFlow.SearchPage.SearchAirports(prop.getProperty("PPRDThirdPartyMADeparture"), prop.getProperty("PPRDThirdPartyMAArrival"));
 
-		FO_BookFlow.SearchPage.BothOutAndInbounddate(prop.getProperty("PPRDThirdPartyMADepartureMonth"), prop.getProperty("PPRDThirdPartyMADepartureDate"), prop.getProperty("PPRDThirdPartyMAArrivalMonth"), prop.getProperty("PPRDThirdPartyMAArrivalDate"));
+		FO_BookFlow.SearchPage.BothOutAndInbounddate(prop.getProperty("PPRDThirdPartyMADepartureDay"), prop.getProperty("PPRDThirdPartyMAArrivalDay"));
 
 		FO_BookFlow.SearchPage.PassengersAdults(prop.getProperty("passengers2"));
 		
@@ -506,6 +506,12 @@ public class TwowayWithAdults extends LaunchBrowser {
 		
 		FO_BookFlow.ConfirmationPage.BookingDetails();
 		
+	}
+	
+	@Test (retryAnalyzer =RetryFailureTCs.class)
+	public static void Test() throws Exception 
+	{
+		TestComponents.LaunchBrowser.initializeDriver();
 	}
 
 }

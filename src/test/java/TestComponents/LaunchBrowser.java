@@ -15,7 +15,6 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
-
 import Common_PaymentPage.PaymentMethods;
 import Common_PaymentPage.PaymentoptionsPage;
 import FO_BookFlow.BookflowWebsite;
@@ -23,12 +22,10 @@ import FO_BookFlow.ConfirmationPage;
 import FO_BookFlow.ExtraoptionsPage;
 import FO_BookFlow.FlightoptionsPage;
 import FO_BookFlow.PassengerdetailsPage;
-import FO_BookFlow.PaymentMethods_Old;
-import FO_BookFlow.PaymentoptionsPage_Old;
 import FO_BookFlow.SearchPage;
 import FO_MMB.AmendConfirmation;
 import FO_MMB.Documents;
-import FO_MMB.FlightAmendments;
+import FO_MMB.FlightAmends;
 import FO_MMB.MMBWebsite;
 import FO_MMB.ReservationDetails;
 import FO_MMB.ReviewChangesPage;
@@ -51,7 +48,8 @@ public class LaunchBrowser {
 		
 		if(browser.equalsIgnoreCase("Chrome")) 
 		{
-			WebDriverManager.chromedriver().setup();
+			System.setProperty("webdriver.chrome.driver", "Drivers/chromedriver.exe");
+//			WebDriverManager.chromedriver().setup();
 			driver = new ChromeDriver();
 		}
 		else if(browser.equalsIgnoreCase("Firefox")) 
@@ -86,10 +84,6 @@ public class LaunchBrowser {
 	    
 		PassengerdetailsPage passengerdetailspage = new PassengerdetailsPage(driver);
 	    
-		PaymentoptionsPage_Old paymentoptionspageOld = new PaymentoptionsPage_Old(driver);
-	    
-		PaymentMethods_Old paymentmethodsOld = new PaymentMethods_Old(driver);
-		
         PaymentoptionsPage paymentoptionspage = new PaymentoptionsPage(driver);
 	    
 		PaymentMethods paymentmethods = new PaymentMethods(driver);
@@ -102,7 +96,7 @@ public class LaunchBrowser {
 		
 		Documents docs = new Documents(driver);
 		
-		FlightAmendments flightAmends = new FlightAmendments(driver);
+		FlightAmends flightAmends = new FlightAmends(driver);
 		
 		ReviewChangesPage reviewChanges = new ReviewChangesPage(driver);
 		

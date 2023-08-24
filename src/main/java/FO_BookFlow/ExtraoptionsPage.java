@@ -2,7 +2,10 @@ package FO_BookFlow;
 
 import static org.testng.Assert.assertTrue;
 
+import java.io.FileInputStream;
+import java.io.IOException;
 import java.time.Duration;
+import java.util.Properties;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -13,14 +16,20 @@ import Resources.xpathsFO_BookFlow;
 public class ExtraoptionsPage extends AbstractComponents {
 	
 	static WebDriver driver;
+	static Properties prop;
+	public static String Insurance;
 
 	@SuppressWarnings("static-access")
-	public ExtraoptionsPage(WebDriver driver) 
+	public ExtraoptionsPage(WebDriver driver) throws IOException 
 	{
 		super(driver);
 		this.driver = driver;
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 		driver.navigate().refresh();
+		
+		prop= new Properties();
+		FileInputStream fis = new FileInputStream (	System.getProperty("user.dir") + "//src//main//java//Resources//GlobalData.properties");
+		prop.load(fis);
 	}
 	
 	public static void ExtraOptionsPageVerification()
@@ -64,34 +73,92 @@ public class ExtraoptionsPage extends AbstractComponents {
 		System.out.println("Navigating to Passenger details page...");
 	}
 	
-	public static void CombiInsurance() throws InterruptedException 
+	public static void AddInsurance(String InsuranceName) throws InterruptedException 
 	{
-		Boolean VerifyTitle = driver.getCurrentUrl().contains("book/extraoptions");
-		assertTrue(VerifyTitle);
+		Insurance = InsuranceName;
 		
-		waitForElementVisible(By.xpath(xpathsFO_BookFlow.xpath_randomClickonCurrentPage));
-		driver.findElement(By.xpath(xpathsFO_BookFlow.xpath_randomClickonCurrentPage)).click();
+		if (Insurance.contains("NA")) 
+		{
+			NoInsurance();
+		}
+		else 
+		{
+			Boolean VerifyTitle = driver.getCurrentUrl().contains("book/extraoptions");
+			assertTrue(VerifyTitle);
+			
+			waitForElementVisible(By.xpath(xpathsFO_BookFlow.xpath_randomClickonCurrentPage));
+			driver.findElement(By.xpath(xpathsFO_BookFlow.xpath_randomClickonCurrentPage)).click();
+			
+			waitForElementVisible(By.xpath(xpathsFO_BookFlow.xpath_DOBCheckBoxPax1));
+			driver.findElement(By.xpath(xpathsFO_BookFlow.xpath_DOBCheckBoxPax1)).click();
+//			driver.findElement(By.xpath(xpathsFO_BookFlow.xpath_DOBCheckBoxPax2)).click();
+			
+			driver.findElement(By.xpath(xpathsFO_BookFlow.xpath_DateOfDOB_Pax1)).sendKeys(prop.getProperty("LeadPaxDOBdate"));
+			driver.findElement(By.xpath(xpathsFO_BookFlow.xpath_MonthOfDOB_Pax1)).sendKeys(prop.getProperty("LeadPaxDOBmonth"));
+			driver.findElement(By.xpath(xpathsFO_BookFlow.xpath_YearOfDOB_Pax1)).sendKeys(prop.getProperty("LeadPaxDOByear"));
+			
+			waitForElementVisible(By.xpath(xpathsFO_BookFlow.xpath_DOBCheckBoxPax2));
+			driver.findElement(By.xpath(xpathsFO_BookFlow.xpath_DOBCheckBoxPax2)).click();
+			Thread.sleep(1000);
+			driver.findElement(By.xpath(xpathsFO_BookFlow.xpath_DOBCheckBoxPax2)).click();
+			Thread.sleep(1000);
+			driver.findElement(By.xpath(xpathsFO_BookFlow.xpath_InsuranceRecalculation)).click();
+			
+			if(InsuranceName.contains("Travel")) 
+			{
+				TravelInsurance();
+			}
+			else if(InsuranceName.contains("Cancel")) 
+			{
+				CancelInsurance();
+			}
+			else if(InsuranceName.contains("Combi")) 
+			{
+				CombiInsurance();
+			}
+			
+			System.out.println("Selected Insurance: " + Insurance);
+		}
+	}
+	
+	public static void TravelInsurance() 
+	{
 		
-		waitForElementVisible(By.xpath(xpathsFO_BookFlow.xpath_DOBCheckBoxPax1));
-		driver.findElement(By.xpath(xpathsFO_BookFlow.xpath_DOBCheckBoxPax1)).click();
-		driver.findElement(By.xpath(xpathsFO_BookFlow.xpath_DOBCheckBoxPax2)).click();
+	}
+	
+	public static void CancelInsurance() 
+	{
 		
-		driver.findElement(By.xpath(xpathsFO_BookFlow.xpath_DateOfDOB_Pax1)).sendKeys("12");
-		driver.findElement(By.xpath(xpathsFO_BookFlow.xpath_MonthOfDOB_Pax1)).sendKeys("05");
-		driver.findElement(By.xpath(xpathsFO_BookFlow.xpath_YearOfDOB_Pax1)).sendKeys("1991");
-		
-		driver.findElement(By.xpath(xpathsFO_BookFlow.xpath_InsuranceRecalculation)).click();
-		Thread.sleep(3000);
-		
+	}
+	
+/*	public static void CombiInsurancePererson() throws InterruptedException 
+	{
+//		Thread.sleep(3000);
 		driver.findElement(By.xpath(xpathsFO_BookFlow.xpath_CombiInsurance)).click();
 		driver.findElement(By.xpath(xpathsFO_BookFlow.xpath_SelectingCombiInsurancePax1)).click();
 		
+		waitForElementVisible(By.xpath(xpathsFO_BookFlow.xpath_InsuranceConfirm));
+		driver.findElement(By.xpath(xpathsFO_BookFlow.xpath_InsuranceConfirm)).click();
+		
+		Thread.sleep(3000);
+		waitForElementVisible(By.xpath(xpathsFO_BookFlow.xpath_InsurancePopupConfirm));
+		driver.findElement(By.xpath(xpathsFO_BookFlow.xpath_InsurancePopupConfirm)).click();
+		
+		
+	}
+*/	
+	
+	public static void CombiInsurance() throws InterruptedException 
+	{
+		Thread.sleep(3000);
+		driver.findElement(By.xpath(xpathsFO_BookFlow.xpath_CombiInsurance)).click();
+		driver.findElement(By.xpath(xpathsFO_BookFlow.xpath_SelectingCombiInsurance)).click();
+		
+		Thread.sleep(1000);
 		waitForElementVisible(By.xpath(xpathsFO_BookFlow.xpath_ContinueFromExtraOptionsPage));
 		driver.findElement(By.xpath(xpathsFO_BookFlow.xpath_ContinueFromExtraOptionsPage)).click();
 		
-		Thread.sleep(5000);
-		waitForElementVisible(By.xpath(xpathsFO_BookFlow.xpath_InsuranceConfirm));
-		driver.findElement(By.xpath(xpathsFO_BookFlow.xpath_InsuranceConfirm)).click();
+		
 		
 		
 	}

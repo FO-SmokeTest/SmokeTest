@@ -353,24 +353,7 @@ public class MMBWebsite extends AbstractComponents {
 		waitForElementPresent(By.xpath(Resources.xpathsFO_MMB.xpath_ContinueToMMB));
 		Thread.sleep(2000);
 		driver.findElement(By.xpath(Resources.xpathsFO_MMB.xpath_ContinueToMMB)).click();
-		
-/*		WebElement OutboundCalander = driver.findElement(By.xpath(Resources.xpathsFO_MMB.xpath_MMBCalendarMonth_B2C));
-		Select OutboundMonth = new Select (OutboundCalander);
-		OutboundMonth.selectByVisibleText(DeptMonth);
-		
-		List<WebElement> dates = driver.findElements(By.xpath(Resources.xpathsFO_MMB.xpath_MMBCalendarDay_B2C)); 
-		  int count = dates.size();
-		  
-		  for(int i=0; i<count; i++) 
-		  { 
-			  String RealDate = dates.get(i).getText();
-			  if(RealDate.equalsIgnoreCase(DeptDate)) 
-			  { 
-				  dates.get(i).click(); 
-				  break; 
-			  } 
-		   }
-*/		  
+			  
 		  
 	}
 	

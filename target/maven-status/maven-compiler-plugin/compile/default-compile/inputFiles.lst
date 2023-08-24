@@ -7,7 +7,6 @@ C:\SrinivasSelenium\SmokeTest_TestNG\src\main\java\Common_PaymentPage\PaymentMet
 C:\SrinivasSelenium\SmokeTest_TestNG\src\main\java\Resources\ExtentReproter.java
 C:\SrinivasSelenium\SmokeTest_TestNG\src\main\java\Resources\inputsPKG.java
 C:\SrinivasSelenium\SmokeTest_TestNG\src\main\java\AbstractMethods\PassengerInformation.java
-C:\SrinivasSelenium\SmokeTest_TestNG\src\main\java\FO_BookFlow\PaymentMethods_Old.java
 C:\SrinivasSelenium\SmokeTest_TestNG\src\main\java\FO_BookFlow\BookflowWebsite.java
 C:\SrinivasSelenium\SmokeTest_TestNG\src\main\java\Common_PaymentPage\PaymentoptionsPage.java
 C:\SrinivasSelenium\SmokeTest_TestNG\src\main\java\AbstractMethods\AbstractComponents.java
@@ -19,7 +18,6 @@ C:\SrinivasSelenium\SmokeTest_TestNG\src\main\java\Resources\xpathsFO_MMB.java
 C:\SrinivasSelenium\SmokeTest_TestNG\src\main\java\Resources\xpathsPKG_MMB.java
 C:\SrinivasSelenium\SmokeTest_TestNG\src\main\java\FO_BookFlow\SearchPage.java
 C:\SrinivasSelenium\SmokeTest_TestNG\src\main\java\FO_BookFlow\ExtraoptionsPage.java
-C:\SrinivasSelenium\SmokeTest_TestNG\src\main\java\FO_BookFlow\PaymentoptionsPage_Old.java
 C:\SrinivasSelenium\SmokeTest_TestNG\src\main\java\FO_BookFlow\PassengerdetailsPage.java
 C:\SrinivasSelenium\SmokeTest_TestNG\src\main\java\FO_BookFlow\ConfirmationPage.java
 C:\SrinivasSelenium\SmokeTest_TestNG\src\main\java\FO_MMB\Documents.java

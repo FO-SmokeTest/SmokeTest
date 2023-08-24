@@ -27,7 +27,7 @@ public class MMBflow extends LaunchBrowser {
 	{
 		TargetedMMB("SIT_BE_B2C"); 
 		
-        FO_MMB.FlightAmendments.FlightAmends(prop.getProperty("SITB2CBEBaggageAmend"), prop.getProperty("SITB2CBESportSSRAmend"), prop.getProperty("SITB2CBEPetSSRAmend"));
+        FO_MMB.FlightAmends.FlightAmendments(prop.getProperty("SITB2CBEBaggageAmend"), prop.getProperty("SITB2CBESportSSRAmend"), prop.getProperty("SITB2CBEPetSSRAmend"));
 		
         Common_PaymentPage.PaymentMethods.MMBPayment(prop.getProperty("SITB2CBEPayment"));
 		
@@ -40,7 +40,7 @@ public class MMBflow extends LaunchBrowser {
 	{
 		TargetedMMB("SIT_NL_B2C");
 		
-		FO_MMB.FlightAmendments.FlightAmends(prop.getProperty("SITB2CNLBaggageAmend"), prop.getProperty("SITB2CNLSportSSRAmend"), prop.getProperty("SITB2CNLPetSSRAmend"));
+		FO_MMB.FlightAmends.FlightAmendments(prop.getProperty("SITB2CNLBaggageAmend"), prop.getProperty("SITB2CNLSportSSRAmend"), prop.getProperty("SITB2CNLPetSSRAmend"));
 		
 		Common_PaymentPage.PaymentMethods.MMBPayment(prop.getProperty("SITB2CNLPayment"));
 		
@@ -53,7 +53,7 @@ public class MMBflow extends LaunchBrowser {
 	{
 		TargetedMMB("SIT_FR_B2C");
 		
-		FO_MMB.FlightAmendments.FlightAmends(prop.getProperty("SITB2CFRBaggageAmend"), prop.getProperty("SITB2CFRSportSSRAmend"), prop.getProperty("SITB2CFRPetSSRAmend"));
+		FO_MMB.FlightAmends.FlightAmendments(prop.getProperty("SITB2CFRBaggageAmend"), prop.getProperty("SITB2CFRSportSSRAmend"), prop.getProperty("SITB2CFRPetSSRAmend"));
 		
 		Common_PaymentPage.PaymentMethods.MMBPayment(prop.getProperty("SITB2CFRPayment"));
 		
@@ -66,7 +66,7 @@ public class MMBflow extends LaunchBrowser {
 	{
 		TargetedMMB("SIT_MA_B2C");
 		
-		FO_MMB.FlightAmendments.FlightAmends(prop.getProperty("SITB2CMABaggageAmend"), prop.getProperty("SITB2CMASportSSRAmend"), prop.getProperty("SITB2CMAPetSSRAmend"));
+		FO_MMB.FlightAmends.FlightAmendments(prop.getProperty("SITB2CMABaggageAmend"), prop.getProperty("SITB2CMASportSSRAmend"), prop.getProperty("SITB2CMAPetSSRAmend"));
 		
 		Common_PaymentPage.PaymentMethods.MMBPayment(prop.getProperty("SITB2CMAPayment"));
 		
@@ -79,7 +79,7 @@ public class MMBflow extends LaunchBrowser {
 	{
 		TargetedMMB("SIT_BE_Inhouse");
 		
-		FO_MMB.FlightAmendments.FlightAmends(prop.getProperty("SITInhouseBEBaggageAmend"), prop.getProperty("SITInhouseBESportSSRAmend"), prop.getProperty("SITInhouseBEPetSSRAmend"));
+		FO_MMB.FlightAmends.FlightAmendments(prop.getProperty("SITInhouseBEBaggageAmend"), prop.getProperty("SITInhouseBESportSSRAmend"), prop.getProperty("SITInhouseBEPetSSRAmend"));
 		
 		Common_PaymentPage.PaymentMethods.MMBPayment(prop.getProperty("SITInhouseBEPayment"));
 		
@@ -92,7 +92,7 @@ public class MMBflow extends LaunchBrowser {
 	{
 		TargetedMMB("SIT_NL_Inhouse");
 		
-		FO_MMB.FlightAmendments.FlightAmends(prop.getProperty("SITInhouseNLBaggageAmend"), prop.getProperty("SITInhouseNLSportSSRAmend"), prop.getProperty("SITInhouseNLPetSSRAmend"));
+		FO_MMB.FlightAmends.FlightAmendments(prop.getProperty("SITInhouseNLBaggageAmend"), prop.getProperty("SITInhouseNLSportSSRAmend"), prop.getProperty("SITInhouseNLPetSSRAmend"));
 		
 		Common_PaymentPage.PaymentMethods.MMBPayment(prop.getProperty("SITInhouseNLPayment"));
 		
@@ -105,7 +105,7 @@ public class MMBflow extends LaunchBrowser {
 	{
 		TargetedMMB("SIT_MA_Inhouse");
 	
-		FO_MMB.FlightAmendments.FlightAmends(prop.getProperty("SITInhouseMABaggageAmend"), prop.getProperty("SITInhouseMASportSSRAmend"), prop.getProperty("SITInhouseMAPetSSRAmend"));
+		FO_MMB.FlightAmends.FlightAmendments(prop.getProperty("SITInhouseMABaggageAmend"), prop.getProperty("SITInhouseMASportSSRAmend"), prop.getProperty("SITInhouseMAPetSSRAmend"));
 	
 		Common_PaymentPage.PaymentMethods.MMBPayment(prop.getProperty("SITInhouseMAPayment"));
 		
@@ -118,7 +118,7 @@ public class MMBflow extends LaunchBrowser {
 	{
 		TargetedMMB("SIT_BE_ThirdParty");
 		
-		FO_MMB.FlightAmendments.FlightAmends(prop.getProperty("SITThirdPartyBEBaggageAmend"), prop.getProperty("SITThirdPartyBESportSSRAmend"), prop.getProperty("SITThirdPartyBEPetSSRAmend"));
+		FO_MMB.FlightAmends.FlightAmendments(prop.getProperty("SITThirdPartyBEBaggageAmend"), prop.getProperty("SITThirdPartyBESportSSRAmend"), prop.getProperty("SITThirdPartyBEPetSSRAmend"));
 		
         FO_MMB.AmendConfirmation.AmendConfirmVerification();
 		
@@ -129,7 +129,7 @@ public class MMBflow extends LaunchBrowser {
 	{
 		TargetedMMB("SIT_NL_ThirdParty");
 		
-		FO_MMB.FlightAmendments.FlightAmends(prop.getProperty("SITThirdPartyNLBaggageAmend"), prop.getProperty("SITThirdPartyNLSportSSRAmend"), prop.getProperty("SITThirdPartyNLPetSSRAmend"));
+		FO_MMB.FlightAmends.FlightAmendments(prop.getProperty("SITThirdPartyNLBaggageAmend"), prop.getProperty("SITThirdPartyNLSportSSRAmend"), prop.getProperty("SITThirdPartyNLPetSSRAmend"));
 	
         FO_MMB.AmendConfirmation.AmendConfirmVerification();
 		
@@ -140,7 +140,7 @@ public class MMBflow extends LaunchBrowser {
 	{
 		TargetedMMB("SIT_MA_ThirdParty");
 		
-		FO_MMB.FlightAmendments.FlightAmends(prop.getProperty("SITThirdPartyMABaggageAmend"), prop.getProperty("SITThirdPartyMASportSSRAmend"), prop.getProperty("SITThirdPartyMAPetSSRAmend"));
+		FO_MMB.FlightAmends.FlightAmendments(prop.getProperty("SITThirdPartyMABaggageAmend"), prop.getProperty("SITThirdPartyMASportSSRAmend"), prop.getProperty("SITThirdPartyMAPetSSRAmend"));
 		
         FO_MMB.AmendConfirmation.AmendConfirmVerification();
 		
@@ -152,7 +152,7 @@ public class MMBflow extends LaunchBrowser {
 	{
 		TargetedMMB("PPRD_BE_B2C");
 		
-		FO_MMB.FlightAmendments.FlightAmends(prop.getProperty("PPRDB2CBEBaggageAmend"), prop.getProperty("PPRDB2CBESportSSRAmend"), prop.getProperty("PPRDB2CBEPetSSRAmend"));
+		FO_MMB.FlightAmends.FlightAmendments(prop.getProperty("PPRDB2CBEBaggageAmend"), prop.getProperty("PPRDB2CBESportSSRAmend"), prop.getProperty("PPRDB2CBEPetSSRAmend"));
 		
 		Common_PaymentPage.PaymentMethods.MMBPayment(prop.getProperty("PPRDB2CBEPayment"));
 		
@@ -165,7 +165,7 @@ public class MMBflow extends LaunchBrowser {
 	{
 		TargetedMMB("PPRD_NL_B2C");
 		
-		FO_MMB.FlightAmendments.FlightAmends(prop.getProperty("PPRDB2CNLBaggageAmend"), prop.getProperty("PPRDB2CNLSportSSRAmend"), prop.getProperty("PPRDB2CNLPetSSRAmend"));
+		FO_MMB.FlightAmends.FlightAmendments(prop.getProperty("PPRDB2CNLBaggageAmend"), prop.getProperty("PPRDB2CNLSportSSRAmend"), prop.getProperty("PPRDB2CNLPetSSRAmend"));
 		
 		Common_PaymentPage.PaymentMethods.MMBPayment(prop.getProperty("PPRDB2CNLPayment"));
         
@@ -178,7 +178,7 @@ public class MMBflow extends LaunchBrowser {
 	{
 		TargetedMMB("PPRD_FR_B2C");
 		
-		FO_MMB.FlightAmendments.FlightAmends(prop.getProperty("PPRDB2CFRBaggageAmend"), prop.getProperty("PPRDB2CFRSportSSRAmend"), prop.getProperty("PPRDB2CFRPetSSRAmend"));
+		FO_MMB.FlightAmends.FlightAmendments(prop.getProperty("PPRDB2CFRBaggageAmend"), prop.getProperty("PPRDB2CFRSportSSRAmend"), prop.getProperty("PPRDB2CFRPetSSRAmend"));
 		
 		Common_PaymentPage.PaymentMethods.MMBPayment(prop.getProperty("PPRDB2CFRPayment"));
 		
@@ -191,7 +191,7 @@ public class MMBflow extends LaunchBrowser {
 	{
 		TargetedMMB("PPRD_MA_B2C");
 		
-		FO_MMB.FlightAmendments.FlightAmends(prop.getProperty("PPRDB2CMABaggageAmend"), prop.getProperty("PPRDB2CMASportSSRAmend"), prop.getProperty("PPRDB2CMAPetSSRAmend"));
+		FO_MMB.FlightAmends.FlightAmendments(prop.getProperty("PPRDB2CMABaggageAmend"), prop.getProperty("PPRDB2CMASportSSRAmend"), prop.getProperty("PPRDB2CMAPetSSRAmend"));
 		
 		Common_PaymentPage.PaymentMethods.MMBPayment(prop.getProperty("PPRDB2CMAPayment"));
 		
@@ -204,7 +204,7 @@ public class MMBflow extends LaunchBrowser {
 	{
 		TargetedMMB("PPRD_BE_Inhouse");
 		
-		FO_MMB.FlightAmendments.FlightAmends(prop.getProperty("PPRDInhouseBEBaggageAmend"), prop.getProperty("PPRDInhouseBESportSSRAmend"), prop.getProperty("PPRDInhouseBEPetSSRAmend"));
+		FO_MMB.FlightAmends.FlightAmendments(prop.getProperty("PPRDInhouseBEBaggageAmend"), prop.getProperty("PPRDInhouseBESportSSRAmend"), prop.getProperty("PPRDInhouseBEPetSSRAmend"));
 		
 		Common_PaymentPage.PaymentMethods.MMBPayment(prop.getProperty("PPRDInhouseBEPayment"));
 		
@@ -217,7 +217,7 @@ public class MMBflow extends LaunchBrowser {
 	{
 		TargetedMMB("PPRD_NL_Inhouse");
 		
-		FO_MMB.FlightAmendments.FlightAmends(prop.getProperty("PPRDInhouseNLBaggageAmend"), prop.getProperty("PPRDInhouseNLSportSSRAmend"), prop.getProperty("PPRDInhouseNLPetSSRAmend"));
+		FO_MMB.FlightAmends.FlightAmendments(prop.getProperty("PPRDInhouseNLBaggageAmend"), prop.getProperty("PPRDInhouseNLSportSSRAmend"), prop.getProperty("PPRDInhouseNLPetSSRAmend"));
 		
 		Common_PaymentPage.PaymentMethods.MMBPayment(prop.getProperty("PPRDInhouseNLPayment"));
 		
@@ -230,7 +230,7 @@ public class MMBflow extends LaunchBrowser {
 	{
 		TargetedMMB("PPRD_MA_Inhouse");
 		
-		FO_MMB.FlightAmendments.FlightAmends(prop.getProperty("PPRDInhouseMABaggageAmend"), prop.getProperty("PPRDInhouseMASportSSRAmend"), prop.getProperty("PPRDInhouseMAPetSSRAmend"));
+		FO_MMB.FlightAmends.FlightAmendments(prop.getProperty("PPRDInhouseMABaggageAmend"), prop.getProperty("PPRDInhouseMASportSSRAmend"), prop.getProperty("PPRDInhouseMAPetSSRAmend"));
 		
 		Common_PaymentPage.PaymentMethods.MMBPayment(prop.getProperty("PPRDInhouseMAPayment"));
 		
@@ -243,7 +243,7 @@ public class MMBflow extends LaunchBrowser {
 	{
 		TargetedMMB("PPRD_BE_ThirdParty");
 		
-		FO_MMB.FlightAmendments.FlightAmends(prop.getProperty("PPRDThirdPartyBEBaggageAmend"), prop.getProperty("PPRDThirdPartyBESportSSRAmend"), prop.getProperty("PPRDThirdPartyBEPetSSRAmend"));
+		FO_MMB.FlightAmends.FlightAmendments(prop.getProperty("PPRDThirdPartyBEBaggageAmend"), prop.getProperty("PPRDThirdPartyBESportSSRAmend"), prop.getProperty("PPRDThirdPartyBEPetSSRAmend"));
 				
         FO_MMB.AmendConfirmation.AmendConfirmVerification();
 		
@@ -254,7 +254,7 @@ public class MMBflow extends LaunchBrowser {
 	{
 		TargetedMMB("PPRD_NL_ThirdParty");
 		
-		FO_MMB.FlightAmendments.FlightAmends(prop.getProperty("PPRDThirdPartyNLBaggageAmend"), prop.getProperty("PPRDThirdPartyNLSportSSRAmend"), prop.getProperty("PPRDThirdPartyNLPetSSRAmend"));
+		FO_MMB.FlightAmends.FlightAmendments(prop.getProperty("PPRDThirdPartyNLBaggageAmend"), prop.getProperty("PPRDThirdPartyNLSportSSRAmend"), prop.getProperty("PPRDThirdPartyNLPetSSRAmend"));
 		
         FO_MMB.AmendConfirmation.AmendConfirmVerification();
 		
@@ -265,7 +265,7 @@ public class MMBflow extends LaunchBrowser {
 	{
 		TargetedMMB("PPRD_MA_ThirdParty");
 		
-		FO_MMB.FlightAmendments.FlightAmends(prop.getProperty("PPRDThirdPartyMABaggageAmend"), prop.getProperty("PPRDThirdPartyMASportSSRAmend"), prop.getProperty("PPRDThirdPartyMAPetSSRAmend"));
+		FO_MMB.FlightAmends.FlightAmendments(prop.getProperty("PPRDThirdPartyMABaggageAmend"), prop.getProperty("PPRDThirdPartyMASportSSRAmend"), prop.getProperty("PPRDThirdPartyMAPetSSRAmend"));
 		
 		FO_MMB.AmendConfirmation.AmendConfirmVerification();
 		

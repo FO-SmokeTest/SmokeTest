@@ -71,28 +71,28 @@ public static String JourneyType;
     
 	}
 	
-	public static void OnlyOutbounddate(String month, String date) 
+	public static void OnlyOutbounddate(String JourneyDate) 
 	{
 		
 		//Selecting Outbound date
 		shadowHost().findElement(By.cssSelector(xpathsFO_BookFlow.cssSelector_OutboundCalendertextbox)).click();
-		DropdownByCSS(xpathsFO_BookFlow.cssSelector_OutboundMonth, month);
-		ListofWebelementsByCSS(xpathsFO_BookFlow.cssSelector_OutboundDate, date);
+		JourneyMonth(xpathsFO_BookFlow.cssSelector_OutboundMonth, FlyingMonth(JourneyDate));
+		JourneyDay(xpathsFO_BookFlow.cssSelector_OutboundDate, FlyingDay(JourneyDate));
 				
-		System.out.println("Outbound date: "+ date +" "+ month);	
+		System.out.println("Outbound date: "+ FlyingMonth(JourneyDate) +"-"+ FlyingDay(JourneyDate));	
 	}
 	
-	public static void BothOutAndInbounddate(String outboundMonth, String outboundDate, String inboundMonth, String inboundDate) 
+	public static void BothOutAndInbounddate(String JourneyDate, String ReturnDate) 
 	{   
 		//Selecting Outbound date
-		OnlyOutbounddate(outboundMonth, outboundDate);
+		OnlyOutbounddate(JourneyDate);
 		
 		//Selecting Inbound date
 		shadowHost().findElement(By.cssSelector(xpathsFO_BookFlow.cssSelector_InboundCalendertextbox)).click();
-		DropdownByCSS(xpathsFO_BookFlow.cssSelector_InboundMonth, inboundMonth);
-		ListofWebelementsByCSS(xpathsFO_BookFlow.cssSelector_InboundDate, inboundDate);
+		JourneyMonth(xpathsFO_BookFlow.cssSelector_InboundMonth, FlyingMonth(ReturnDate));
+		JourneyDay(xpathsFO_BookFlow.cssSelector_InboundDate, FlyingDay(ReturnDate));
 	
-		System.out.println("Inbound date: "+inboundDate +" "+inboundMonth);
+		System.out.println("Inbound date: "+FlyingMonth(ReturnDate) +"-"+FlyingDay(ReturnDate));
 	}
 	
 	public static void PassengersAdults(String adults) throws InterruptedException 
@@ -177,9 +177,9 @@ public static String JourneyType;
     		MADSelection.selectByVisibleText("MAD");
     	}
     	
-    	WebElement NearbyAirportsUncheck = driver.findElement(By.xpath(xpathsFO_BookFlow.xpath_NearByAirortsCheckbox));
-    	waitForWebElement(NearbyAirportsUncheck);
-    	NearbyAirportsUncheck.click();
+//    	WebElement NearbyAirportsUncheck = driver.findElement(By.xpath(xpathsFO_BookFlow.xpath_NearByAirortsCheckbox));
+//    	waitForWebElement(NearbyAirportsUncheck);
+//    	NearbyAirportsUncheck.click();
     	
     	WebElement OutboundFlightSelection = driver.findElement(By.xpath(xpathsFO_BookFlow.xpath_OutboundFlightSelect));
     	waitForWebElement(OutboundFlightSelection);
@@ -203,9 +203,9 @@ public static String JourneyType;
     		MADSelection.selectByVisibleText("MAD");
     	}
     	
-    	WebElement NearbyAirportsUncheck = driver.findElement(By.xpath(xpathsFO_BookFlow.xpath_NearByAirortsCheckbox));
-    	waitForWebElement(NearbyAirportsUncheck);
-    	NearbyAirportsUncheck.click();
+//    	WebElement NearbyAirportsUncheck = driver.findElement(By.xpath(xpathsFO_BookFlow.xpath_NearByAirortsCheckbox));
+//    	waitForWebElement(NearbyAirportsUncheck);
+//    	NearbyAirportsUncheck.click();
   	
     	WebElement OutboundFlightSelection = driver.findElement(By.xpath(xpathsFO_BookFlow.xpath_OutboundFlightSelect));
     	waitForWebElement(OutboundFlightSelection);

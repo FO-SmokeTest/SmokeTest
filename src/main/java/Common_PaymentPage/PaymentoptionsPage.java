@@ -37,43 +37,72 @@ public class PaymentoptionsPage extends AbstractComponents {
 //-----**** B2C Payment options methods ****----- 
 //-----**** &&&&&&&&&&&&&&&&&&&&&&&&&&& ****-----
 		
-    // BE Payment options
-	public static void SofortSelection_BE_B2C()
+    //Payment options selection
+	public static void SofortSelection_B2C()
 	{
 	
-		driver.findElement(By.xpath(xpathsFO_BookFlow.xpath_SofortSelection_BE)).click();
+		driver.findElement(By.xpath(xpathsFO_BookFlow.xpath_SofortSelection)).click();
 		System.out.println("Sofort Payment selected as payment method...");
 		
 		waitForElementVisible(By.xpath(xpathsFO_BookFlow.xpath_ContinueFromPaymentOptions));
 		driver.findElement(By.xpath(xpathsFO_BookFlow.xpath_ContinueFromPaymentOptions)).click();
 	}
 	
-	public static void VisaCardSelection_BE_B2C()
+	public static void AmexCardSelection_B2C()
 	{
 		
-		driver.findElement(By.xpath(xpathsFO_BookFlow.xpath_VisaCardSelection_BE)).click();
-		System.out.println("Visa card selected as payment method...");
+		driver.findElement(By.xpath(xpathsFO_BookFlow.xpath_AmexCardSelection)).click();
+		System.out.println("Amex card selected as payment method");
 		
 		waitForElementVisible(By.xpath(xpathsFO_BookFlow.xpath_ContinueFromPaymentOptions));
 		driver.findElement(By.xpath(xpathsFO_BookFlow.xpath_ContinueFromPaymentOptions)).click();
 	}
 	
-	public static void IdealSelection_BE_B2C() 
+	public static void BancontactCardSelection_B2C()
+	{
+	
+		driver.findElement(By.xpath(xpathsFO_BookFlow.xpath_BancontactSelection)).click();
+		System.out.println("Bancontact card selected as payment method");
+		
+		waitForElementVisible(By.xpath(xpathsFO_BookFlow.xpath_ContinueFromPaymentOptions));
+		driver.findElement(By.xpath(xpathsFO_BookFlow.xpath_ContinueFromPaymentOptions)).click();
+	}
+	
+	public static void MaestroCardSelection_B2C()
 	{
 		
-		driver.findElement(By.xpath(xpathsFO_BookFlow.xpath_IdealBankSelection_BE)).click();
+		driver.findElement(By.xpath(xpathsFO_BookFlow.xpath_MaestroCardSelection)).click();
+		System.out.println("Maestro card selected as payment method");
+		
+		waitForElementVisible(By.xpath(xpathsFO_BookFlow.xpath_ContinueFromPaymentOptions));
+		driver.findElement(By.xpath(xpathsFO_BookFlow.xpath_ContinueFromPaymentOptions)).click();
+	}
+	
+	public static void MasterCardSelection_B2C()
+	{
+		
+		driver.findElement(By.xpath(xpathsFO_BookFlow.xpath_MasterCardSelection)).click();
+		System.out.println("Master card selected as payment method");
+		
+		waitForElementVisible(By.xpath(xpathsFO_BookFlow.xpath_ContinueFromPaymentOptions));
+		driver.findElement(By.xpath(xpathsFO_BookFlow.xpath_ContinueFromPaymentOptions)).click();
+	}
+	
+	public static void IdealSelection_B2C() 
+	{
+		
+		driver.findElement(By.xpath(xpathsFO_BookFlow.xpath_IdealSelection)).click();
 		System.out.println("Ideal payment selected as payment method...");
 		
 		waitForElementVisible(By.xpath(xpathsFO_BookFlow.xpath_ContinueFromPaymentOptions));
 		driver.findElement(By.xpath(xpathsFO_BookFlow.xpath_ContinueFromPaymentOptions)).click();
 	}
 	
-	// NL Payment options
-	public static void IdealSelection_NL_B2C()
+	public static void VisaCardSelection_B2C()
 	{
 		
-		driver.findElement(By.xpath(xpathsFO_BookFlow.xpath_IdealBankSelection_NL)).click();
-		System.out.println("Ideal payment selected as payment method");
+		driver.findElement(By.xpath(xpathsFO_BookFlow.xpath_VisaCardSelection)).click();
+		System.out.println("Visa card selected as payment method...");
 		
 		waitForElementVisible(By.xpath(xpathsFO_BookFlow.xpath_ContinueFromPaymentOptions));
 		driver.findElement(By.xpath(xpathsFO_BookFlow.xpath_ContinueFromPaymentOptions)).click();
@@ -88,22 +117,18 @@ public class PaymentoptionsPage extends AbstractComponents {
 		driver.findElement(By.xpath(xpathsFO_BookFlow.xpath_ContinueFromPaymentOptions)).click();
 	}
 	
-	// FR Payment options
-	public static void VisaCardSelection_FR_B2C()
+	public static void VisaCardSelection_MAinMAD_B2C()
 	{
-	
-		driver.findElement(By.xpath(xpathsFO_BookFlow.xpath_VisaCardSelection_FR)).click();
+		driver.findElement(By.xpath(xpathsFO_BookFlow.xpath_VisaCardSelection_MAinMAD)).click();
 		System.out.println("Visa card selected as payment method");
 		
 		waitForElementVisible(By.xpath(xpathsFO_BookFlow.xpath_ContinueFromPaymentOptions));
 		driver.findElement(By.xpath(xpathsFO_BookFlow.xpath_ContinueFromPaymentOptions)).click();
 	}
 	
-	// MA Payment options
-	public static void ViasSelection_MAinMAD_B2C()
+	public static void CmiSelection_MAinMAD_B2C()
 	{
-		
-		driver.findElement(By.xpath(xpathsFO_BookFlow.xpath_VisaCardSelection_MAinMAD)).click();
+		driver.findElement(By.xpath(xpathsFO_BookFlow.xpath_CmiSelection_MAinMAD)).click();
 		System.out.println("Visa card selected as payment method");
 		
 		waitForElementVisible(By.xpath(xpathsFO_BookFlow.xpath_ContinueFromPaymentOptions));

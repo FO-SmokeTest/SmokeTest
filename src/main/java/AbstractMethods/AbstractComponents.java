@@ -1,6 +1,8 @@
 package AbstractMethods;
 
 import java.time.Duration;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.List;
 
 import org.openqa.selenium.By;
@@ -49,29 +51,30 @@ public class AbstractComponents {
 	wait.until(ExpectedConditions.visibilityOfAllElements(element));
 	}
 	
-	public static void SelectMonth(String MonthXpath, String month) throws InterruptedException 
+	public static String FlyingMonth(String journey) 
 	{
-		  WebElement OutboundCalander = driver.findElement(By.xpath(MonthXpath));
-		  Thread.sleep(2000); 
-		  Select OutboundMonth = new Select (OutboundCalander);
-		  OutboundMonth.selectByVisibleText(month);
+		String Journey = journey;        //+ 45 days
+		String[] words=Journey.split(" ");
+		String JourneyMonth = words[1];
+		LocalDate today = LocalDate.now();
+		LocalDate futureDate = today.plusDays(Integer.parseInt(JourneyMonth));
+		DateTimeFormatter monthFormatter = DateTimeFormatter.ofPattern("yyyy-MM");
+		String Monthvalue = futureDate.format(monthFormatter);
+		return Monthvalue;
 		  
 	}
 	
-	public static void SelectDate(String DayXpath, String day) throws InterruptedException 
+	public static String FlyingDay(String journey) 
 	{
-		List<WebElement> dates = driver.findElements(By.xpath(DayXpath)); 
-		  int count = dates.size();
+		String Journey = journey;        //+ 45 days
+		String[] words=Journey.split(" ");
+		String JourneyDay = words[1];
+		LocalDate today = LocalDate.now();
+		LocalDate futureDate = today.plusDays(Integer.parseInt(JourneyDay));
+		DateTimeFormatter dayFormatter = DateTimeFormatter.ofPattern("dd");
+		String DayValue = futureDate.format(dayFormatter);
+		return DayValue;
 		  
-		  for(int i=0; i<count; i++) 
-		  { 
-			  String RealDate = dates.get(i).getText();
-			  if(RealDate.equalsIgnoreCase(day)) 
-			  { 
-				  dates.get(i).click(); 
-				  break; 
-		      }
-	      } 
 	}
 	
 	public static void DropdownByCSS(String Xpath, String SelectData)
@@ -83,11 +86,32 @@ public class AbstractComponents {
 		  
 	}
 	
-	public static void ListofWebelementsByCSS(String Xpath, String SelectData)
+	public static void JourneyMonth(String Xpath, String SelectData)
+	{
+		WebElement Webelement = shadowHost().findElement(By.cssSelector(Xpath));
+		waitForWebElement(Webelement);
+		Select TargetSelection = new Select (Webelement);
+		TargetSelection.selectByValue(SelectData);
+		  
+	}
+	
+	public static void JourneyDay(String Xpath, String SelectData)
 	{
 		List<WebElement> TargettedData = shadowHost().findElements(By.cssSelector(Xpath));
 		waitForWebElements(TargettedData);
 		int count = TargettedData.size();
+		
+		if(SelectData.contains("0")) 
+		{
+			String[]DeptwithZero = SelectData.split("");
+			String ZeroDeptDate = DeptwithZero[0];
+			if(ZeroDeptDate.contains("0")) 
+			{
+				SelectData = DeptwithZero[1];
+			}
+			
+		}
+		
 		for(int i=0;i<count;i++) 
 		{
 			String selectedData = TargettedData.get(i).getText();
@@ -120,6 +144,8 @@ public class AbstractComponents {
 		return ActualAmount;
 	}
 	
+//MMB Calander	
+	
 	public static String LeadPaxLastname (String Name) 
 	{
 		String Paxname = Name;        //"M. Sourav Ganguly"; //M. Sourav Ganguly
@@ -148,6 +174,10 @@ public class AbstractComponents {
 			SelectableMonth = sepMonth;
 		}
 		else if(deptmonth.contains("oct")) 
+		{
+			SelectableMonth = octMonth;
+		}
+		else if(deptmonth.contains("okt")) 
 		{
 			SelectableMonth = octMonth;
 		}
@@ -182,6 +212,31 @@ public class AbstractComponents {
 		
 		return SelectableDay;
 		
+	}
+	
+	public static void SelectMonth(String MonthXpath, String month) throws InterruptedException 
+	{
+		  WebElement OutboundCalander = driver.findElement(By.xpath(MonthXpath));
+		  Thread.sleep(2000); 
+		  Select OutboundMonth = new Select (OutboundCalander);
+		  OutboundMonth.selectByVisibleText(month);
+		  
+	}
+	
+	public static void SelectDate(String DayXpath, String day) throws InterruptedException 
+	{
+		List<WebElement> dates = driver.findElements(By.xpath(DayXpath)); 
+		  int count = dates.size();
+		  
+		  for(int i=0; i<count; i++) 
+		  { 
+			  String RealDate = dates.get(i).getText();
+			  if(RealDate.equalsIgnoreCase(day)) 
+			  { 
+				  dates.get(i).click(); 
+				  break; 
+		      }
+	      } 
 	}
 	
 

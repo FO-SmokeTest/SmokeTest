@@ -86,98 +86,151 @@ public class PaymentMethods extends AbstractComponents {
 		
 	}
 	
+	
+//-----**** &&&&&&&&&&&&&&&&&&& ****-----    
+//-----**** B2C Payment methods ****----- 
+//-----**** &&&&&&&&&&&&&&&&&&& ****-----
+	
 	public static void PaymentMethod_B2C(String B2CPaymentMethod) throws InterruptedException 
 	{
 		if (selectedWebsite.contains("BE_B2C")) {
 			
-			if(B2CPaymentMethod.contains("Visa")) 
-			{
-				VisaCardPayment_BEandFR();
-			}
-			else if(B2CPaymentMethod.contains("Sofort")) 
+			if(B2CPaymentMethod.contains("Sofort")) 
 			{
 				SofortPayment_BE();
+			}
+			else if(B2CPaymentMethod.contains("Amex")) 
+			{
+				AmexPayment_BE();
+			}
+			else if(B2CPaymentMethod.contains("Bancontact")) 
+			{
+				BancontactPayment_BE();
+			}
+			else if(B2CPaymentMethod.contains("Maestro")) 
+			{
+				MaestroPayment_BE();
+			}
+			else if(B2CPaymentMethod.contains("Master")) 
+			{
+				MasterPayment_BE();
+			}
+			else if(B2CPaymentMethod.contains("Visa")) 
+			{
+				VisaCardPayment_BEandFR();
 			}
 			else if(B2CPaymentMethod.contains("Ideal")) 
 			{
 				IdealPayment_BE();
 			}
-		
+			else
+			{
+				System.out.println("Please select a valid payment method");
+			}
 			
 	    } else if (selectedWebsite.contains("NL_B2C")) {
 	    	
-	    	if(B2CPaymentMethod.contains("Visa")) 
+	    	if(B2CPaymentMethod.contains("Ideal")) 
+			{
+				IdealPayment_NL();
+			}
+	    	else if(B2CPaymentMethod.contains("Visa")) 
 			{
 	    		VisaCardPayment_NL();
 			}
-			else if(B2CPaymentMethod.contains("Ideal")) 
+			else if(B2CPaymentMethod.contains("Maestro")) 
 			{
-				IdealPayment_NL();
+				MaestroPayment_NL();
+			}
+			else if(B2CPaymentMethod.contains("Master")) 
+			{
+				MasterPayment_NL();
+			}
+			else if(B2CPaymentMethod.contains("Bancontact")) 
+			{
+				BancontactPayment_NL();
+			}
+			else
+			{
+				System.out.println("Please select a valid payment method");
 			}
 	       
 	    } else if (selectedWebsite.contains("FR_B2C")) {
 	    	
-	    	if(B2CPaymentMethod.contains("Visa")) 
+	    	if(B2CPaymentMethod.contains("Amex")) 
+			{
+	    		AmexPayment_FR();
+			}
+	    	else if(B2CPaymentMethod.contains("Bancontact")) 
+			{
+	    		BancontactPayment_FR();
+			}
+	    	else if(B2CPaymentMethod.contains("Maestro")) 
+			{
+	    		MaestroPayment_FR();
+			}
+	    	else if(B2CPaymentMethod.contains("Master")) 
+			{
+	    		MasterPayment_FR();
+			}
+	    	else if(B2CPaymentMethod.contains("Visa")) 
 			{
 	    		VisaCardPayment_BEandFR();
+			}
+	    	else
+			{
+				System.out.println("Please select a valid payment method");
 			}
 	        
 	    } else if (selectedWebsite.contains("MA_B2C")) {
 	    	
+	    	if(B2CPaymentMethod.contains("CMI")) 
+			{
+	    		CmiPayment_MAinMAD();
+			}
+	    	else if(B2CPaymentMethod.contains("Master")) 
+			{
+	    		MasterPayment_MAinMAD();
+			}
+	    	if(B2CPaymentMethod.contains("Maestro")) 
+			{
+	    		MaestroPayment_MAinMAD();
+			}
 	    	if(B2CPaymentMethod.contains("Visa")) 
 			{
 	    		VisaCardPayment_MAinMAD();
 			}
+	    	else
+			{
+				System.out.println("Please select a valid payment method");
+			}
 	    }
 	}
-	
-	public static void PaymentMethod_Inhouse(String InhousePaymentMethod) throws InterruptedException 
-	{
-		String PaymentType = InhousePaymentMethod;
-		
-		if (selectedWebsite.contains("BE_Inhouse")) {
-			
-			if(InhousePaymentMethod.contains("Cash")) 
-			{
-				CashPayment_Inhouse ();
-			}
-			else 
-			{
-				
-				CardPayment_BE_Inhouse (PaymentType);
-			}
-	     
-	    }else if (selectedWebsite.contains("NL_Inhouse")) {
-	    	
-	    	if(InhousePaymentMethod.contains("Cash")) 
-			{
-	    		CashPayment_Inhouse ();
-			}
-
-	    }else if (selectedWebsite.contains("MA_Inhouse")) {
-	    	
-	    	if(InhousePaymentMethod.contains("Cash")) 
-			{
-	    		CashPayment_MA_Inhouse ();
-			}
-	    	else 
-			{
-				
-	    		CardPayment_MA_Inhouse (PaymentType);
-			}
-	        
-	    }
-	}
-	
-	
-//-----**** &&&&&&&&&&&&&&&&&&& ****-----    
-//-----**** B2C Payment methods ****----- 
-//-----**** &&&&&&&&&&&&&&&&&&& ****-----		
 	
 	// BE Payment Methods
+	public static void AmexPayment_BE() 
+	{
+		PaymentoptionsPage.AmexCardSelection_B2C();
+	}
+	
+	public static void BancontactPayment_BE() 
+	{
+		PaymentoptionsPage.BancontactCardSelection_B2C();
+	}
+	
+	public static void MaestroPayment_BE() 
+	{
+		PaymentoptionsPage.MaestroCardSelection_B2C();
+	}
+	
+	public static void MasterPayment_BE() 
+	{
+		PaymentoptionsPage.MasterCardSelection_B2C();
+	}
+	
 	public static void SofortPayment_BE() throws InterruptedException
 	{
-		PaymentoptionsPage.SofortSelection_BE_B2C();
+		PaymentoptionsPage.SofortSelection_B2C();
 		
 		waitForElementVisible(By.xpath(xpathsFO_BookFlow.xpath_sofortPaymentConfirm_BE));
 		waitForElementPresent(By.xpath(xpathsFO_BookFlow.xpath_sofortPaymentConfirm_BE));
@@ -187,14 +240,7 @@ public class PaymentMethods extends AbstractComponents {
 	
 	public static void VisaCardPayment_BEandFR() throws InterruptedException
 	{
-		if (selectedWebsite.contains("BE")) 
-		{
-			PaymentoptionsPage.VisaCardSelection_BE_B2C();
-		}
-		else if (selectedWebsite.contains("FR")) 
-		{
-			PaymentoptionsPage.VisaCardSelection_FR_B2C();
-		}
+		PaymentoptionsPage.VisaCardSelection_B2C();
 		
 		waitForElementVisible(By.xpath(xpathsFO_BookFlow.xpath_VisaCardName_BE));
 		waitForElementPresent(By.xpath(xpathsFO_BookFlow.xpath_VisaCardName_BE));
@@ -218,7 +264,7 @@ public class PaymentMethods extends AbstractComponents {
 	
 	public static void IdealPayment_BE() throws InterruptedException
 	{
-		PaymentoptionsPage.IdealSelection_BE_B2C();
+		PaymentoptionsPage.IdealSelection_B2C();
 		
 		waitForElementVisible(By.xpath(xpathsFO_BookFlow.xpath_IdealBankSelection_BE));
 		waitForElementPresent(By.xpath(xpathsFO_BookFlow.xpath_IdealBankSelection_BE));
@@ -236,7 +282,7 @@ public class PaymentMethods extends AbstractComponents {
 	//NL Payment Methods
 	public static void IdealPayment_NL() throws InterruptedException
 	{
-		PaymentoptionsPage.IdealSelection_NL_B2C();
+		PaymentoptionsPage.IdealSelection_B2C();
 		
 		waitForElementVisible(By.xpath(xpathsFO_BookFlow.xpath_IdealBankSelection_NL));
 		waitForElementPresent(By.xpath(xpathsFO_BookFlow.xpath_IdealBankSelection_NL));
@@ -275,12 +321,63 @@ public class PaymentMethods extends AbstractComponents {
 		
 		System.out.println("Payment completed by VISA CARD...");
 	}
-
+	
+	public static void MaestroPayment_NL() 
+	{
+		PaymentoptionsPage.MaestroCardSelection_B2C();
+	}
+	
+	public static void MasterPayment_NL() 
+	{
+		PaymentoptionsPage.MasterCardSelection_B2C();
+	}
+	
+	public static void BancontactPayment_NL() 
+	{
+		PaymentoptionsPage.BancontactCardSelection_B2C();
+	}
+	
+	// FR Payment Methods
+	public static void AmexPayment_FR() 
+	{
+		PaymentoptionsPage.AmexCardSelection_B2C();
+	}
+	
+	public static void BancontactPayment_FR() 
+	{
+		PaymentoptionsPage.BancontactCardSelection_B2C();
+	}
+	
+	public static void MaestroPayment_FR() 
+	{
+		PaymentoptionsPage.MaestroCardSelection_B2C();
+	}
+	
+	public static void MasterPayment_FR() 
+	{
+		PaymentoptionsPage.MasterCardSelection_B2C();
+	}
+	
 	// MA in MAD payment methods
+	public static void CmiPayment_MAinMAD() 
+	{
+		PaymentoptionsPage.CmiSelection_MAinMAD_B2C();
+	}
+	
+	public static void MasterPayment_MAinMAD() 
+	{
+		PaymentoptionsPage.MasterCardSelection_B2C();
+	}
+	
+	public static void MaestroPayment_MAinMAD() 
+	{
+		PaymentoptionsPage.MaestroCardSelection_B2C();
+	}
+	
 	public static void VisaCardPayment_MAinMAD() throws InterruptedException 
 	{
 		
-		PaymentoptionsPage.ViasSelection_MAinMAD_B2C();
+		PaymentoptionsPage.VisaCardSelection_MAinMAD_B2C();
 		
 		waitForElementVisible(By.xpath(xpathsFO_BookFlow.xpath_VisaCardName_MAinMAD));
 		waitForElementPresent(By.xpath(xpathsFO_BookFlow.xpath_VisaCardName_MAinMAD));
@@ -311,6 +408,44 @@ public class PaymentMethods extends AbstractComponents {
 //-----**** &&&&&&&&&&&&&&&&&&&&&&&&&&&& ****-----    
 //-----**** Inhouse Payment type methods ****----- 
 //-----**** &&&&&&&&&&&&&&&&&&&&&&&&&&&& ****-----	
+	
+	public static void PaymentMethod_Inhouse(String InhousePaymentMethod) throws InterruptedException 
+	{
+		String PaymentType = InhousePaymentMethod;
+		
+		if (selectedWebsite.contains("BE_Inhouse")) {
+			
+			if(InhousePaymentMethod.contains("Cash")) 
+			{
+				CashPayment_Inhouse ();
+			}
+			else 
+			{
+				
+				CardPayment_BE_Inhouse (PaymentType);
+			}
+	     
+	    }else if (selectedWebsite.contains("NL_Inhouse")) {
+	    	
+	    	if(InhousePaymentMethod.contains("Cash")) 
+			{
+	    		CashPayment_Inhouse ();
+			}
+
+	    }else if (selectedWebsite.contains("MA_Inhouse")) {
+	    	
+	    	if(InhousePaymentMethod.contains("Cash")) 
+			{
+	    		CashPayment_MA_Inhouse ();
+			}
+	    	else 
+			{
+				
+	    		CardPayment_MA_Inhouse (PaymentType);
+			}
+	        
+	    }
+	}
 	
 	//BE and NL Payment Methods
 	public static void CashPayment_Inhouse () throws InterruptedException

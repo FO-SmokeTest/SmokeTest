@@ -44,9 +44,12 @@ public class AmendConfirmation extends AbstractComponents {
 			System.out.println("Amendment confirmation page not displaying, Please check manually...");
 		}
 		
-		Baggage = FlightAmendments.Baggage;
-		SportSSR = FlightAmendments.SportSSR;
-		PetSSR = FlightAmendments.PetSSR;
+		Baggage = FlightAmends.Baggage;
+		SportSSR = FlightAmends.SportSSR;
+		PetSSR = FlightAmends.PetSSR;
+		
+		
+		driver.close();
 		
 		
 	}

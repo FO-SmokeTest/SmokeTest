@@ -12,6 +12,7 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 
 import FO_BookFlow.BookflowWebsite;
+import FO_BookFlow.ExtraoptionsPage;
 import Resources.xpathsFO_BookFlow;
 
 public class PassengerInformation extends AbstractComponents {
@@ -51,10 +52,16 @@ public class PassengerInformation extends AbstractComponents {
 			Gender.selectByIndex(2);
 		}
 		
-		waitForElementPresent(By.xpath(xpathsFO_BookFlow.xpath_DateOfDOB_LeadPax));
-		driver.findElement(By.xpath(xpathsFO_BookFlow.xpath_DateOfDOB_LeadPax)).sendKeys(prop.getProperty("LeadPaxDOBdate"));
-		driver.findElement(By.xpath(xpathsFO_BookFlow.xpath_MonthOfDOB_LeadPax)).sendKeys(prop.getProperty("LeadPaxDOBmonth"));
-		driver.findElement(By.xpath(xpathsFO_BookFlow.xpath_YearOfDOB_LeadPax)).sendKeys(prop.getProperty("LeadPaxDOByear"));
+		if (ExtraoptionsPage.Insurance.contains("NA")) 
+		{
+			waitForElementPresent(By.xpath(xpathsFO_BookFlow.xpath_DateOfDOB_LeadPax));
+			driver.findElement(By.xpath(xpathsFO_BookFlow.xpath_DateOfDOB_LeadPax)).sendKeys(prop.getProperty("LeadPaxDOBdate"));
+			driver.findElement(By.xpath(xpathsFO_BookFlow.xpath_MonthOfDOB_LeadPax)).sendKeys(prop.getProperty("LeadPaxDOBmonth"));
+			driver.findElement(By.xpath(xpathsFO_BookFlow.xpath_YearOfDOB_LeadPax)).sendKeys(prop.getProperty("LeadPaxDOByear"));
+			
+		}
+		
+		
 	}
 	
 	public static void Address() 
@@ -139,7 +146,8 @@ public class PassengerInformation extends AbstractComponents {
 		
 		driver.findElement(By.xpath(xpathsFO_BookFlow.xpath_DateOfDOB_NonLeadPax)).sendKeys(prop.getProperty("NonLeadPaxDOBdate"));
 		driver.findElement(By.xpath(xpathsFO_BookFlow.xpath_MonthOfDOB_NonLeadPax)).sendKeys(prop.getProperty("NonLeadPaxDOBmonth"));
-		driver.findElement(By.xpath(xpathsFO_BookFlow.xpath_YearOfDOB_NonLeadPax)).sendKeys(prop.getProperty("NonLeadPaxDOByear"));
+		driver.findElement(By.xpath(xpathsFO_BookFlow.xpath_YearOfDOB_NonLeadPax)).sendKeys(prop.getProperty("NonLeadPaxDOByear"));	
+		
 	}
 	
 	public static void ChildAs2ndPax () throws InterruptedException 

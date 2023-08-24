@@ -6,7 +6,7 @@
 	</listeners> 
   <test thread-count="5" name="SIT Smoketest Bookflow">
     <classes>
-      <class name="FO_Testcases.TwowayWithAdults">
+      <class name="Smoke_TCs.SIT_SmokeTCs">
 		  <methods>
 			  <include name="SIT_BE_B2C"/>
 			  <include name="SIT_NL_B2C"/>
@@ -24,7 +24,7 @@
   </test>
   <test thread-count="5" name="SIT Smoketest MMB">
     <classes>
-      <class name="FO_Testcases.MMBflow">
+      <class name="Smoke_TCs.SIT_SmokeTCs">
 		  <methods>
 			  <include name="MMB_SIT_BE_B2C"/>
 			  <include name="MMB_SIT_NL_B2C"/>

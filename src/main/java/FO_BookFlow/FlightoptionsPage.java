@@ -66,16 +66,19 @@ public class FlightoptionsPage extends AbstractComponents {
 		{
 			BaggageSelection(Baggage);
 			Thread.sleep(5000);
+			System.out.println("Selected Baggage: " + Baggage);
 		}
 		else if (!SportSSR.contentEquals("NA")) 
 		{
 			SportsSelection(SportSSR);
 			Thread.sleep(5000);
+			System.out.println("Selected SportSSR: " + SportSSR);
 		}
 		else if (!PetSSR.contentEquals("NA")) 
 		{
 			PetsSelection(PetSSR);
 			Thread.sleep(5000);
+			System.out.println("Selected PetSSR: " + PetSSR);
 		}
 		
 		
@@ -93,40 +96,35 @@ public class FlightoptionsPage extends AbstractComponents {
 		{
 			waitForWebElement(Baggage_ShadowHost().findElement(By.cssSelector(xpathsFO_BookFlow.cssSelector_20kgBaggagePax1)));
 			Baggage_ShadowHost().findElement(By.cssSelector(xpathsFO_BookFlow.cssSelector_20kgBaggagePax1)).click();
-			System.out.println("20Kg baggage selected...");
 			
 		}
 		else if (baggage.contains("25"))
 		{
 			waitForWebElement(Baggage_ShadowHost().findElement(By.cssSelector(xpathsFO_BookFlow.cssSelector_25kgBaggagePax1)));
 			Baggage_ShadowHost().findElement(By.cssSelector(xpathsFO_BookFlow.cssSelector_25kgBaggagePax1)).click();
-			System.out.println("25Kg baggage selected...");
 			
 		}
 		else if (baggage.contains("30"))
 		{
 			waitForWebElement(Baggage_ShadowHost().findElement(By.cssSelector(xpathsFO_BookFlow.cssSelector_30kgBaggagePax1)));
 			Baggage_ShadowHost().findElement(By.cssSelector(xpathsFO_BookFlow.cssSelector_30kgBaggagePax1)).click();
-			System.out.println("30Kg baggage selected...");
 			
 		}
 		else if (baggage.contains("40"))
 		{
 			waitForWebElement(Baggage_ShadowHost().findElement(By.cssSelector(xpathsFO_BookFlow.cssSelector_40kgBaggagePax1)));
 			Baggage_ShadowHost().findElement(By.cssSelector(xpathsFO_BookFlow.cssSelector_40kgBaggagePax1)).click();
-			System.out.println("40Kg baggage selected...");
 			
 		}
 		else if (baggage.contains("50"))
 		{
 			waitForWebElement(Baggage_ShadowHost().findElement(By.cssSelector(xpathsFO_BookFlow.cssSelector_50kgBaggagePax1)));
 			Baggage_ShadowHost().findElement(By.cssSelector(xpathsFO_BookFlow.cssSelector_50kgBaggagePax1)).click();
-			System.out.println("50Kg baggage selected...");
 			
 		}
 		else 
 		{
-			System.out.println("No baggage selected...");
+			System.out.println("Please select a valid baggage...");
 		}
 		
 	}		
@@ -142,43 +140,41 @@ public class FlightoptionsPage extends AbstractComponents {
 		{
 //			waitForWebElement(Sports_ShadowHost().findElement(By.cssSelector(xpathsFO_BookFlow.cssSelector_BicycleSportsPax1)));
 			Sports_ShadowHost().findElement(By.cssSelector(xpathsFO_BookFlow.cssSelector_BicycleSportsPax1)).click();
-			System.out.println("Bicycle SSR selected...");
-			
+		
 		}
 		else if(sports.contains("SurfBoard")) 
 		{
 //			waitForWebElement(Sports_ShadowHost().findElement(By.cssSelector(xpathsFO_BookFlow.cssSelector_SurfBoardSportsPax1)));
 			Sports_ShadowHost().findElement(By.cssSelector(xpathsFO_BookFlow.cssSelector_SurfBoardSportsPax1)).click();
-			System.out.println("SurfBoard SSR selected...");
 			
 		}
 		else if(sports.contains("Golf")) 
 		{
 //			waitForWebElement(Sports_ShadowHost().findElement(By.cssSelector(xpathsFO_BookFlow.cssSelector_GolfSportsPax1)));
 			Sports_ShadowHost().findElement(By.cssSelector(xpathsFO_BookFlow.cssSelector_GolfSportsPax1)).click();
-			System.out.println("Golf SSR selected...");
 			
 		}
 		else if(sports.contains("Paraglider")) 
 		{
 //			waitForWebElement(Sports_ShadowHost().findElement(By.cssSelector(xpathsFO_BookFlow.cssSelector_ParagliderSportsPax1)));
 			Sports_ShadowHost().findElement(By.cssSelector(xpathsFO_BookFlow.cssSelector_ParagliderSportsPax1)).click();
-			System.out.println("Paraglider SSR selected...");
 			
 		}
 		else if(sports.contains("Dive")) 
 		{
 //			waitForWebElement(Sports_ShadowHost().findElement(By.cssSelector(xpathsFO_BookFlow.cssSelector_DiveSportsPax1)));
 			Sports_ShadowHost().findElement(By.cssSelector(xpathsFO_BookFlow.cssSelector_DiveSportsPax1)).click();
-			System.out.println("Dive SSR selected...");
 			
 		}
 		else if(sports.contains("WaterSki")) 
 		{
 //			waitForWebElement(Sports_ShadowHost().findElement(By.cssSelector(xpathsFO_BookFlow.cssSelector_WaterSkiSportsPax1)));
 			Sports_ShadowHost().findElement(By.cssSelector(xpathsFO_BookFlow.cssSelector_WaterSkiSportsPax1)).click();
-			System.out.println("WaterSki SSR selected...");
 			
+		}
+		else 
+		{
+			System.out.println("Please select a valid sport SSR...");
 		}
 		
 	}
@@ -194,15 +190,17 @@ public class FlightoptionsPage extends AbstractComponents {
 		{
 			waitForWebElement(Sports_ShadowHost().findElement(By.cssSelector(xpathsFO_BookFlow.cssSelector_AvihPetPax1)));
 			Pets_ShadowHost().findElement(By.cssSelector(xpathsFO_BookFlow.cssSelector_AvihPetPax1)).click();
-			System.out.println("AVIH SSR selected...");
 			
 		}
 		else if(pet.contains("PETC")) 
 		{
 			waitForWebElement(Sports_ShadowHost().findElement(By.cssSelector(xpathsFO_BookFlow.cssSelector_PetcPetPax1)));
 			Pets_ShadowHost().findElement(By.cssSelector(xpathsFO_BookFlow.cssSelector_PetcPetPax1)).click();
-			System.out.println("PETC SSR selected...");
 			
+		}
+		else 
+		{
+			System.out.println("Please select a valid pet SSR...");
 		}
 		
 	}

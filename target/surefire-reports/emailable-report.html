@@ -9,46 +9,19 @@
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
 <tr><th colspan="8">SmokeTest</th></tr>
-<tr><td><a href="#t0">PPRD Smoketest Bookflow</a></td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num attn">1</td><td class="num">12,832</td><td></td><td></td></tr>
+<tr><td><a href="#t0">PPRD Smoketest Bookflow</a></td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num attn">1</td><td class="num">92,648</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">SmokeTest</th></tr></tbody><tbody id="t0"><tr><th colspan="4">PPRD Smoketest Bookflow &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">FO_Testcases.TwowayWithAdults</td><td><a href="#m0">PPRD_BE_B2C</a></td><td rowspan="1">1691585991825</td><td rowspan="1">2967</td></tr><tr><th colspan="4">PPRD Smoketest Bookflow &#8212; retried</th></tr><tr class="retriedeven"><td rowspan="1">FO_Testcases.TwowayWithAdults</td><td><a href="#m1">PPRD_BE_B2C</a></td><td rowspan="1">1691585981993</td><td rowspan="1">9828</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">SmokeTest</th></tr></tbody><tbody id="t0"><tr><th colspan="4">PPRD Smoketest Bookflow &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">FO_Testcases.TwowayWithAdults</td><td><a href="#m0">PPRD_BE_Inhouse</a></td><td rowspan="1">1691598171373</td><td rowspan="1">44562</td></tr><tr><th colspan="4">PPRD Smoketest Bookflow &#8212; retried</th></tr><tr class="retriedeven"><td rowspan="1">FO_Testcases.TwowayWithAdults</td><td><a href="#m1">PPRD_BE_Inhouse</a></td><td rowspan="1">1691598123428</td><td rowspan="1">47929</td></tr></tbody>
 </table>
-<h2>PPRD Smoketest Bookflow</h2><h3 id="m0">FO_Testcases.TwowayWithAdults#PPRD_BE_B2C</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=115.0.5790.111)
+<h2>PPRD Smoketest Bookflow</h2><h3 id="m0">FO_Testcases.TwowayWithAdults#PPRD_BE_Inhouse</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;a id=&quot;searchButton&quot; href=&quot;/retail/flight/nl/search?flyingFrom%5B%5D=BRU&amp;amp;flyingTo%5B%5D=FUE&amp;amp;depDate=2023-09-16&amp;amp;adults=2&amp;amp;children=0&amp;amp;childAge=&amp;amp;choiceSearch=true&amp;amp;searchType=pricegrid&amp;amp;nearByAirports=true&amp;amp;currency=EUR&amp;amp;isOneWay=false&amp;amp;returnDate=2023-09-23&quot; data-clickable=&quot;true&quot; class=&quot;searchButton__1c113 button__e29a5 medium__e29a5 text__e29a5 normal__e29a5 uppercase__e29a5 secondary__e29a5&quot;&gt;...&lt;/a&gt; is not clickable at point (887, 182). Other element would receive the click: &lt;section data-vertical=&quot;&quot; data-scrollbar=&quot;&quot; class=&quot;main__e29a5 scroller__e29a5 content__c8b47 &quot;&gt;...&lt;/section&gt;
+  (Session info: chrome=115.0.5790.171)
 Build info: version: &apos;4.10.0&apos;, revision: &apos;c14d967899&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_381&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.20&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [a784e6cac9eb011f10bbe0ccdfb749d6, findElement {using=id, value=cmCloseBanner}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 115.0.5790.111, chrome: {chromedriverVersion: 115.0.5790.170 (cc0d30c2ca5..., userDataDir: C:\WINDOWS\SystemTemp\scope...}, goog:chromeOptions: {debuggerAddress: localhost:64884}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:64884/devtoo..., se:cdpVersion: 115.0.5790.111, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: a784e6cac9eb011f10bbe0ccdfb749d6
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:199)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:132)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:51)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:531)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:66)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:350)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:344)
-	at FO_BookFlow.BookflowWebsite.WebsiteSelection_B2C(BookflowWebsite.java:90)
-	at FO_BookFlow.BookflowWebsite.WebsiteSelection(BookflowWebsite.java:34)
-	at TestComponents.LaunchBrowser.TargetedWebsite(LaunchBrowser.java:118)
-	at FO_Testcases.TwowayWithAdults.PPRD_BE_B2C(TwowayWithAdults.java:272)
-	at java.util.ArrayList.forEach(Unknown Source)
-... Removed 35 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m1">FO_Testcases.TwowayWithAdults#PPRD_BE_B2C</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=115.0.5790.111)
-Build info: version: &apos;4.10.0&apos;, revision: &apos;c14d967899&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_381&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [3799f8c494b3ea84eb4f939d9ca00d09, clickElement {id=E09483483413550859412CFFDB4937F0_element_125}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 115.0.5790.111, chrome: {chromedriverVersion: 115.0.5790.170 (cc0d30c2ca5..., userDataDir: C:\WINDOWS\SystemTemp\scope...}, goog:chromeOptions: {debuggerAddress: localhost:64788}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:64788/devtoo..., se:cdpVersion: 115.0.5790.111, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[org.openqa.selenium.remote.ShadowRoot@1023150a] -&gt; css selector: [id=&apos;calendarItems-inbound&apos;] div[class=&apos;entry__6a711 day__6a711 available__6a711&apos;]]
-Session ID: 3799f8c494b3ea84eb4f939d9ca00d09
+Command: [bbee4cc4a272217eb38b439315e39edb, clickElement {id=D3FD1899CAD2A787C7A10933FFD5DE41_element_190}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 115.0.5790.171, chrome: {chromedriverVersion: 115.0.5790.170 (cc0d30c2ca5..., userDataDir: C:\WINDOWS\SystemTemp\scope...}, goog:chromeOptions: {debuggerAddress: localhost:58941}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:58941/devtoo..., se:cdpVersion: 115.0.5790.171, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[org.openqa.selenium.remote.ShadowRoot@353f472a] -&gt; css selector: #searchButton]
+Session ID: bbee4cc4a272217eb38b439315e39edb
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:199)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:132)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:51)
@@ -58,10 +31,35 @@ Session ID: 3799f8c494b3ea84eb4f939d9ca00d09
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:531)
 	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:242)
 	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:77)
-	at AbstractMethods.AbstractComponents.ListofWebelementsByCSS(AbstractComponents.java:96)
-	at FO_BookFlow.SearchPage.BothOutAndInbounddate(SearchPage.java:93)
-	at FO_Testcases.TwowayWithAdults.PPRD_BE_B2C(TwowayWithAdults.java:278)
-	at java.util.ArrayList.forEach(Unknown Source)
+	at FO_BookFlow.SearchPage.SearchButton(SearchPage.java:147)
+	at FO_BookFlow.SearchPage.SearchResults(SearchPage.java:154)
+	at FO_BookFlow.SearchPage.PassengersAdults(SearchPage.java:106)
+	at FO_Testcases.TwowayWithAdults.PPRD_BE_Inhouse(TwowayWithAdults.java:378)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+... Removed 35 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">FO_Testcases.TwowayWithAdults#PPRD_BE_Inhouse</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;a id=&quot;searchButton&quot; href=&quot;/retail/flight/nl/search?flyingFrom%5B%5D=BRU&amp;amp;flyingTo%5B%5D=FUE&amp;amp;depDate=2023-09-16&amp;amp;adults=2&amp;amp;children=0&amp;amp;childAge=&amp;amp;choiceSearch=true&amp;amp;searchType=pricegrid&amp;amp;nearByAirports=true&amp;amp;currency=EUR&amp;amp;isOneWay=false&amp;amp;returnDate=2023-09-23&quot; data-clickable=&quot;true&quot; class=&quot;searchButton__1c113 button__e29a5 medium__e29a5 text__e29a5 normal__e29a5 uppercase__e29a5 secondary__e29a5&quot;&gt;...&lt;/a&gt; is not clickable at point (887, 182). Other element would receive the click: &lt;section data-vertical=&quot;&quot; data-scrollbar=&quot;&quot; class=&quot;main__e29a5 scroller__e29a5 content__c8b47 &quot;&gt;...&lt;/section&gt;
+  (Session info: chrome=115.0.5790.171)
+Build info: version: &apos;4.10.0&apos;, revision: &apos;c14d967899&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.20&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [edd6f78cb6892353e344850857275633, clickElement {id=CB6C15E435DB562DC5B4FCF00F4AB02A_element_194}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 115.0.5790.171, chrome: {chromedriverVersion: 115.0.5790.170 (cc0d30c2ca5..., userDataDir: C:\WINDOWS\SystemTemp\scope...}, goog:chromeOptions: {debuggerAddress: localhost:58810}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:58810/devtoo..., se:cdpVersion: 115.0.5790.171, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[org.openqa.selenium.remote.ShadowRoot@38b3f208] -&gt; css selector: #searchButton]
+Session ID: edd6f78cb6892353e344850857275633
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:199)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:132)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:51)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:531)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:242)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:77)
+	at FO_BookFlow.SearchPage.SearchButton(SearchPage.java:147)
+	at FO_BookFlow.SearchPage.SearchResults(SearchPage.java:154)
+	at FO_BookFlow.SearchPage.PassengersAdults(SearchPage.java:106)
+	at FO_Testcases.TwowayWithAdults.PPRD_BE_Inhouse(TwowayWithAdults.java:378)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
 ... Removed 35 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>
